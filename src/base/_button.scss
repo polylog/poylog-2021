@@ -1,0 +1,36 @@
+.btn {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: $size-line;
+  font-family: var(--font-family-title);
+  font-weight: 800;
+  font-size: $size-3;
+  line-height: 1;
+  text-align: center;
+  color: $color-ink-inverse-normal;
+  text-transform: uppercase;
+  background-color: $color-primary-bg-dark;
+  transition: all $motion-duration-xs;
+}
+
+.btn svg path {
+  transition: all $motion-duration-xs;
+}
+
+@include media-breakpoint-up(lg) {
+  .btn {
+    padding: 36px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .btn {
+    padding: 40px;
+  }
+}

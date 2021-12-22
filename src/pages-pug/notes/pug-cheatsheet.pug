@@ -1,0 +1,337 @@
+//-
+  https://devhints.io/pug
+  https://pugjs.org/language/attributes.html
+
+//- ----------------------------------------------------------------------------
+//- ITERATION
+//- ----------------------------------------------------------------------------
+block iteration
+
+  //- OBJECT
+
+  //- ☝️🧐 To write a multiple array or object, the hyphen before the `var` or
+  //- `const` must be on a separate, first line
+  -
+    const myCollection = [
+      {
+        icon: 'heart',
+        title: 'Title 01',
+        href: '/a'
+      },
+      {
+        icon: 'chevron',
+        title: 'Title 02',
+        href: '/b'
+      },
+    ]
+
+  ul
+    each item in myCollection
+      li
+        a(href= item.href)
+          //- to get the variables output as escaped html use figure !{item.icon}
+          figure !{item.icon}
+          item.title
+
+  ul
+    // each key, value in myObject
+    each val, key in {1: 'one', 2: 'two', 3: 'three'}
+      li=`${key}: ${val}`
+
+  //- =>
+  <ul>
+    <li>1: one</li>
+    <li>2: two</li>
+    <li>3: three</li>
+  </ul>
+
+  //- ARRAY
+
+  ul
+    each val in [1, 2, 3, 4]
+      li= val
+
+  //- =>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+
+  //- #2
+  ul
+    each val, index in ['zero', 'one', 'two']
+      li= index + ': ' + val
+
+  //- =>
+  <ul>
+    <li>0: zero</li>
+    <li>1: one</li>
+    <li>2: two</li>
+  </ul>
+
+  //- ДАННЫХ НЕТ
+
+  - const values = [];
+    ul
+      each val in values.length ? values : ['There are no values']
+        li= val
+
+  //- ОДНАКО Я ПРЕДПОЧИТАЮ МИКСИНЫ — КОД ПОЛУЧАЕТСЯ ЧИЩЕ
+
+//- ----------------------------------------------------------------------------
+//- MIXINS
+//- ----------------------------------------------------------------------------
+block mixins
+
+ul.dropdown__menu#nav-global-more-menu(role='listbox', aria-labelledby='nav-global-more', data-dropdown-menu)
+  mixin menuMoreItem(label, href, icon, extraClass)
+    li(class!=attributes.class, role='option')
+      a.dropdown__link(href= href)
+        +icon(`${icon}`)
+        = label
+
+  +menuMoreItem('Marketplace', '/marketplace', 'shopping-cart')(class='d-md-none')
+  +menuMoreItem('Freelance', '/freelancers', 'user-plus')(class='d-md-none')
+  +menuMoreItem('Events', '/events', 'calendar')
+
+  //- Пример №2
+
+  //- /pages/base/mixins.pug
+  mixin article(title)
+    article
+      h1.title= title
+      block
+
+  //- Использование
+  include /pages/base/mixins
+
+  ⚠️  Атрибуты следует заключать в кавычки.
+  +article('hello there')
+    p Абзац, который попадет в блок `block`. А заголовок будет `hello there`
+
+  //- Пример №3
+  mixin icon(name, classes)
+  svg.icon(class= classes, aria-hidden='true', focusable='false')
+    use(href='/img/base/graphics/sprite.svg#icon-' + name)
+
+  +icon('search', 'is-search')
+
+  //- Пример №4
+  mixin pet(name)
+    li.pet= name
+
+  ul
+    +pet('cat')
+    +pet('dog')
+    +pet('pig')
+
+  //- =>
+  <ul>
+    <li class="pet">cat</li>
+    <li class="pet">dog</li>
+    <li class="pet">pig</li>
+  </ul>
+
+  //- Аргумент attributes. HTML-атрибут добавляется, только, если явно указан
+  mixin link(href, name)
+    a(class!=attributes.class, href=href)= name
+
+  +link('/foo', 'Текст первой ссылки')
+  +link('/baz', 'Текст второй ссылки')(class="btn")
+
+  //- =>
+  <a href="/foo">Текст первой ссылки</a>
+  <a class="btn" href="/baz">Текст второй ссылки</a>
+
+//- ----------------------------------------------------------------------------
+//- CONDITIONALS
+//- ----------------------------------------------------------------------------
+block сonditionals
+
+  - const user = {description: 'foo bar baz'}
+  - const authorised = false
+  #user
+    if user.description
+      h2.green Description
+      p.description= user.description
+    else if authorised
+      h2.blue Description
+      p.description.
+        User has no description,
+        why not add one...
+    else
+      h2.red Description
+      p.description User has no description
+
+    - const page = 60;
+    if page => 52
+      h1 Lots of numbers!
+    else if page > 26 && page < 52
+      h1 A few numbers
+    else
+      h1 Not a lot of numbers
+
+    - const showLogin = false;
+    if authorized && showLogin === true
+      .welcome Welcome back to our website!
+    else
+      .login
+        a(href="/login") Login
+
+  //- unless
+  unless user.isAnonymous
+    p You're logged in as #{user.name}
+
+  //- INLINE
+  //- Если в текущем объекте есть свойство video, оно будет использовано,
+  //- как значение data-url, если такого свойства нет, атрибут data-url
+  //- не попадет в HTML
+  a(href=item.url, data-url=(item.video ? item.video : false))
+
+  //- Выбор значения
+  div(class=(i===0 ? 'my-class' : 'my-class and-one-more'))
+
+  //- или ещё короче
+  body(class=page.bodyClasses || false)
+
+
+
+//- ----------------------------------------------------------------------------
+//- ПРОСТОЙ ТЕКСТ И ПУСТЫЕ СТРОКИ
+//- ----------------------------------------------------------------------------
+block whitespace
+
+| Строку простого текста можно создать с вертикальной черты `|` (`pipe`).
+
+| Пустые строки добавляются последовательностью из двух более вертикальных черт.
+| В последовательности, перед последней чертой может быть текст, а может не быть
+| ничего — в любом случае в HTML появится пустая строка. Как после этого абзаца…
+|
+
+|
+|
+
+| …Так и перед этим
+
+
+| Строка простого текста внутри тега также начинается с вертикальной черты `|`
+| и смещается на один отступ, либо выравнивается по уровню нужного соседа —
+| например, иконки.
+
+li: a(href='/user/1042861')
+  +icon('user')
+  |  Моя страница
+
+p.very-very-very-very-very-very-very-very-very-very-long-class-name
+  |  Lorem, ipsum dolor.
+
+Кроме того, с помощью вертикальных черт, можно вставлять в pug-разметку HTML-разметку.
+
+body
+  | <div><a href="lala">Lorem ipsum dolor sit amet</a></div>
+
+  p  Consectetur, adipisicing elit. Neque, voluptatem.
+
+//- ----------------------------------------------------------------------------
+//- TEMPLATE INHERITANCE
+//- ----------------------------------------------------------------------------
+block inheritance
+  //- Append/prepend. Команды используются для того, чтобы добавить код сверху
+    или снизу шаблонного содержания. Например:
+
+  append config
+    - const bodyClasses = 'page is-front'
+
+  prepend scripts
+    script(src='/vendor/three.js')
+
+//- ----------------------------------------------------------------------------
+//- ИНТЕРПОЛЯЦИЯ
+//- ----------------------------------------------------------------------------
+block interpolation
+
+  - const author = "Vladimir";
+  - const theGreat = "<span>escape!</span>";
+
+  h1= title
+  p Written with love by #{author}
+
+  //- Переменные в атрибутах: шаблонные литералы…
+  - const url = 'pug-test.html';
+  a(href=`/${url}`) Link
+
+  //- …или конкатенация
+  a(href='/' + url) Link
+
+//- ----------------------------------------------------------------------------
+//- ПЕРЕМЕННЫЕ, МАССИВЫ И ОБЪЕКТЫ
+//- ----------------------------------------------------------------------------
+
+Переменные можно создавать, как с помощью ключевого слова `var`, так и с помощью `const` или `let`.
+
+-
+  var navLinksCount = 6
+  const columnsCount = 4
+
+  const availableTags = [
+    { label: 'Lost', color: '#E2FBD7' },
+    { label: 'Designer', color: '#DAD7FE' },
+    { label: 'Columbus', color: '#FFF5CC' },
+    { label: 'Harare', color: '#CCF8FE' },
+    { label: 'Alexandria', color: '#FFF5CC' },
+    { label: 'Behance', color: '#DAD7FE' },
+    { label: 'Dogs', color: '#CCF8FE' }
+  ]
+
+  const titles = [
+    'Melbourne',
+    'Brisbane',
+    'Helsinki',
+    'Kathmandu',
+    'Memphis',
+    'Kuala Lumpur',
+    'Bengaluru'
+  ]
+
+  const descriptions = [
+    'Your business is in a continual battle for your customers’ recognition whether you know it or not.',
+    'When you enter into any new area of science, you almost always find.',
+    'Your business is in a continual battle for your customers’ recognition whether you know it or not.',
+    'When you enter into any new area '
+  ]
+
+  const dates = [
+    '22 Sep 2020',
+    '23 Sep 2020',
+    '01 Jun 2021',
+    '28 Apr 2021',
+    '01 Apr 2021',
+    '05 Jan 2021',
+    '11 Feb 2021',
+  ]
+
+//- ----------------------------------------------------------------------------
+//- ФИЛЬТРЫ И MARKDOWN
+//- ----------------------------------------------------------------------------
+
+:markdown-it
+  [Фильтры](https://pugjs.org/language/filters.html) позволяют использовать внутри pug другие языки. В частности — Markdown.
+
+  Чтобы использовать внутри pug'а markdown надо установить специальный модуль [JSTransformer'а](https://www.npmjs.com/search?q=keywords:jstransformer):
+
+  ```sh
+  yarn add jstransformer-markdown-it -D
+  ```
+
+  После этого можно добавлять в pug Markdown. Вот таким способом:
+
+:markdown-it
+  # Markdown
+
+  Markdown document with http://links.com and
+
+  ```js
+  var codeBlocks;
+  ```

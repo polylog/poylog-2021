@@ -1,0 +1,47 @@
+.nav-links {
+  display: flex;
+}
+
+.nav-previous a,
+.nav-next a {
+  border-radius: $shape-border-radius-sm;
+  color: $color-ink-3ry;
+  display: block;
+  text-decoration: none;
+  padding-top: 1rem;
+  padding-bottom: .6rem;
+  transition:
+    background $motion-duration-xs,
+    color $motion-duration-xs;
+
+  &:hover {
+    background-color: $color-background-alt;
+    color: $color-ink-base;
+  }
+}
+
+.nav-previous a {
+  padding-right: $size-2;
+}
+
+.nav-next a {
+  padding-left: $size-2;
+}
+
+// Chevrons
+.nav-previous a::before,
+.nav-next a::after {
+  background: $chevron-right no-repeat center;
+  content: '';
+  display: inline-block;
+  margin-right: $size-1;
+  margin-left: $size-1;
+  opacity: .38;
+  vertical-align: -.7rem;
+  width: $size-width-icon;
+  height: $size-width-icon;
+}
+
+.nav-previous a::before {
+  transform: scaleX(-1);
+}

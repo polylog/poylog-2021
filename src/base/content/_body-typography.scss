@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+// BLOCKS
+// -----------------------------------------------------------------------------
+// #region
+
+address,
+dl,
+p,
+pre,
+%body-copy {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: var(--space-padding-top-base);
+  padding-bottom: var(--space-padding-bottom-base);
+}
+
+.lead,
+%lead {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-big);
+  line-height: var(--font-line-height-big);
+  padding-top: var(--space-padding-top-big);
+  padding-bottom: var(--space-padding-bottom-big);
+}
+
+.petit,
+%petit {
+  font-size: var(--font-size-small);
+  line-height: var(--font-line-height-small);
+  padding-top: var(--space-padding-top-small);
+  padding-bottom: var(--space-padding-bottom-small);
+}
+
+.note {
+  color: $color-ink-2ry;
+}
+// #endregion
+
+// -----------------------------------------------------------------------------
+// INITIAL
+// -----------------------------------------------------------------------------
+// #region
+
+// TODO: refactor
+
+/* stylelint-disable selector-list-comma-newline-after, scss/percent-placeholder-pattern */
+
+.text-block {
+  font-size: var(--font-size-base);
+  line-height: var(--font-line-height-base);
+  margin-bottom: $size-line;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.text-block,
+.case {
+  > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  > *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  // Blocks
+  blockquote {
+    margin: 0;
+    padding: 0;
+    padding: $size-line;
+    font-size: var(--font-size-big);
+    color: $color-ink-inverse-normal;
+    background-color: $color-primary-bg-dark;
+  }
+
+  ul {
+    padding-left: $size-2;
+  }
+
+  ul > li {
+    position: relative;
+  }
+
+  > ul > li,
+  > ol > li {
+    margin-bottom: $size-1;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // .text-block
+  @include media-breakpoint-up(lg) {
+
+    margin-bottom: 40px;
+
+    blockquote {
+      padding: 40px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 60px;
+
+    blockquote {
+      padding: 48px;
+    }
+  }
+}
+
+// Media
+
+.text-block__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+// #endregion
+

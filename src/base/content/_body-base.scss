@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// FONTS
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: var(--font-family-title);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+    url('../fonts/Gilroy-Light.woff2') format('woff2'),
+    url('../fonts/Gilroy-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: var(--font-family-title);
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
+    url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Gilroy-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: HelveticaNeueCyr;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: local('HelveticaNeueCyr Roman'), local('HelveticaNeueCyr-Roman'),
+    url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: HelveticaNeueCyr;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: local('HelveticaNeueCyr Bold'), local('HelveticaNeueCyr-Bold'),
+    url('../fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff');
+}
+
+// -----------------------------------------------------------------------------
+// DOCUMENT
+// -----------------------------------------------------------------------------
+
+body {
+  background-color: $color-background-base;
+  color: $color-ink-base;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--font-line-height-base);
+  margin: 0;
+  padding: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+

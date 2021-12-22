@@ -1,0 +1,17 @@
+extends /pages/base/base.pug
+include /pages/base/mixins
+
+//- FRONT MATTER ---------------------------------------------------------------
+
+append config
+  -
+    var page = {
+      lang: 'ru',
+      title: 'Тестовая стр',
+      description: site.description,
+      bodyClasses: 'page is-blog'
+    }
+
+//- CONTENT --------------------------------------------------------------------
+
+block content

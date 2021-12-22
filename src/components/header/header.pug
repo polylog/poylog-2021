@@ -1,0 +1,35 @@
+include /pages/base/mixins
+
+a#top
+
+header.header
+  .container.header__wrapper
+    a.header__logo(href='/')
+      img(src='https://www.polylog.ru/wp-content/uploads/2020/09/logo_polylog.svg' width='140' height='40' alt='Логотип Polylog')
+
+    .header__nav
+      button.header__toggle(type='button')
+        span
+
+      .header__menu
+        .header__menu-top
+          button.header__menu-close(type='button')
+
+        ul#menu-glavnoe-menyu.header__menu-list
+          mixin headerLink(label, href, additionalClass)
+            li.header__menu-item
+              a.header__menu-link(class= additionalClass, href= href)
+                = label
+
+          +headerLink('Главная', '/')
+          +headerLink('Услуги', '/pr/', 'header__menu-link--services')
+          +headerLink('Кейсы', '/cases/', 'header__menu-link--cases')
+          +headerLink('Команда', '/agency/', 'header__menu-link--team')
+
+          li.header__menu-item.header__menu-link--carrer
+            a.header__menu-link Карьера
+            ul.sub-menu
+              +headerLink('Стажировка', '/stazhirovka/')
+              +headerLink('Вакансии', '/vakansii/')
+
+          +headerLink('Блог', '/pr-blog/', 'header__menu-link is-blog')
