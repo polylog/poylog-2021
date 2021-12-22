@@ -37,7 +37,7 @@ docs
 *.mpeg
 *.pdf
 *.png
-*.svg
+# *.svg
 *.webm
 *.webp
 *.wmv
