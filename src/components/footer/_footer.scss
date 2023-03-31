@@ -367,3 +367,59 @@
     height: 100%;
   }
 }
+
+// -----------------------------------------------------------------------------
+// SOCIAL TOOLTIPS AND MEDIA BUTTONS
+// -----------------------------------------------------------------------------
+
+// List items with counters
+.footer .social {
+  counter-reset: social-marker;
+}
+
+// The first and the second items: telegram accounts
+.footer .social__item:nth-child(-n+2)  {
+  counter-increment: social-marker;
+  position: relative;
+
+  &::before {
+    background-color: $color-primary;
+    border-radius: 50%;
+    color: $color-ink-inverse-normal;
+    content: counter(social-marker);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-small);
+    line-height: 1;
+    position: absolute;
+    right: -$size-1;
+    bottom: -$size-1;
+    width: $size-2;
+    height: $size-2;
+    z-index: 1;
+  }
+}
+
+// Buttons with tooltips
+.footer .social__link {
+  position: relative;
+  z-index: 1;
+}
+
+.footer [data-tooltip] {
+  &::before,
+  &::after {
+    --background-color: #{$color-primary-bg};
+    --color: #{$dark-beta};
+  }
+
+  @include media-breakpoint-down(lg) {
+    --translate-x-body: -12px;
+    --translate-x-caret: 0;
+  }
+}
+
+
+
+

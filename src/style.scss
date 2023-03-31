@@ -30,6 +30,7 @@
 @import 'components/modal/modal';
 @import 'components/view-grid/view-grid';
 @import 'components/tag/tag';
+@import 'components/tooltip/tooltip';
 @import 'components/nav-pagination/pagination';
 
 @import 'pages/home/hero';
@@ -72,3 +73,4 @@ $utilities: map-get-multiple(
 // Helpers & Print
 @import 'util/content';
 @import 'base/print';
+

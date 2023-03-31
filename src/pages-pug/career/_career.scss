@@ -6,6 +6,7 @@
   font-size: var(--font-size-big);
   font-weight: 700;
   line-height: var(--font-line-height-big);
+  margin: 0;
   padding-top: var(--space-padding-top-big);
   padding-bottom: var(--space-padding-bottom-big);
 }
@@ -13,7 +14,6 @@
 .career-teaser__text p {
   margin: 0;
   padding: 0;
-  margin-bottom: $size-2;
 }
 
 .career-teaser__text p:last-of-type {
@@ -58,6 +58,7 @@
 .career-teaser__image {
   display: block;
   width: 100%;
+  max-width: 462px;
 }
 
 .career-teaser__request {
@@ -684,7 +685,7 @@
   }
 
   .career-teaser__resume {
-    width: 596px;
+    width: 100%;
   }
 
   .career-vacancy {

@@ -3,10 +3,10 @@
 }
 
 .career-teaser__text {
+  font-size: var(--font-size-big);
+  font-weight: bold;
+  line-height: var(--font-line-height-big);
   margin-bottom: $size-4;
-  font-family: var(--font-family-accent);
-  font-weight: 800;
-  font-size: $size-line;
 }
 
 .career-teaser__text p {
@@ -54,6 +54,8 @@
 
 .career-teaser__image {
   display: block;
+  width: 100%;
+  max-width: 462px;
 }
 
 .career-teaser__request {
@@ -443,7 +445,6 @@
 
   .career-teaser__text {
     margin-bottom: 48px;
-    font-size: $size-4;
   }
 
   .career-teaser__contacts {
@@ -453,7 +454,7 @@
   .career-teaser__resume {
     align-items: flex-end;
     max-width: none;
-    width: 462px;
+    width: 100%;
     margin: 0;
   }
 
@@ -674,7 +675,6 @@
 
   .career-teaser__text {
     margin-bottom: 60px;
-    font-size: 36px;
   }
 
   .career-teaser__contacts {
@@ -682,7 +682,7 @@
   }
 
   .career-teaser__resume {
-    width: 596px;
+    width: 100%;
   }
 
   .career-vacancy {

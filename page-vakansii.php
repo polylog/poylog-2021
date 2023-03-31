@@ -40,8 +40,8 @@ while ( have_posts() ) { the_post();
 								echo '<img class="career-teaser__image" src="'.kama_thumb_src('src='.$ajob_photo.'&w=596&h=686').'" width="" height="" srcset="'.kama_thumb_src('src='.$ajob_photo.'&w=1192&h=1372').' 2x, '.kama_thumb_src('src='.$ajob_photo.'&w=1788&h=2058').' 3x" alt=""/>';
 							?>
 							 <!--  <button class="btn career-teaser__request form-request__open" type="button"><span><?php echo ( $ajob_button = get_field('ajob_button') ) ? : 'Отправить резюме'; ?></span><svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/>
-</svg>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/>
+									</svg>
 								</button> -->
 								<a target="_blank" href="mailto:Hr@polylog.ru?subject=Отправить резюме" class="btn career-internship__request email-btn" itemprop="email"><span><?php echo ( $feature_button = get_field('feature_button') ) ? : 'Отправить резюме'; ?></span><svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/></svg></a>
 							</div>
@@ -151,6 +151,11 @@ while ( have_posts() ) { the_post();
 								?>
 							</ul>
 						</div>
+
+						<div class="career-selection__title vac-bottom__title">
+							<a href="https://hh.ru/employer/18870" target="_blank" rel="noopener noreferrer">Все открытые вакансии см. на hh.ru</a>
+						</div>
+
 						<div class="career-selection__conditions">
 							<p><strong>Работа в крупной коммуникационной компании единомышленников <a href="https://www.instagram.com/polylogteam/" target="_blank" rel="noopener noreferrer">#polylogteam</a>.</strong></p>
 							<p><strong>Вас ждут разноплановые задачи, требующие креативного и профессионального подхода, а также возможность реализовать свои концепты.</strong></p>

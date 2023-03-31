@@ -1,12 +1,12 @@
 block config
-  include /pages/base/config
+  include /pages-pug/base/config
 
 doctype html
 html(lang=page.lang, prefix='og: http://ogp.me/ns#')
   head
 
     block head
-      include /pages/base/head
+      include /pages-pug/base/head
 
   body(class=page.bodyClasses || false)
 

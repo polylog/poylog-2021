@@ -121,6 +121,18 @@ function polylog_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array_merge(
+			array(
+				'name'        => __( 'Global Search', 'polylog' ),
+				'id'          => 'global-search',
+				'description' => __( 'Add main form search here.', 'polylog' ),
+				'before_widget' => '',
+				'after_widget'  => '',
+			)
+		)
+	);
 }
 
 add_action( 'widgets_init', 'polylog_widgets_init' );

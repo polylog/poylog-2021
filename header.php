@@ -42,8 +42,11 @@
 	<header class="header">
 		<?php if ( ! is_page_template( 'page-foreign.php' ) ) : /* Domestic or Foreign header  */ ?>
 			<div class="container header__wrapper">
-				<a class="header__logo" href="/">
+				<!-- <a class="header__logo" href="/">
 					<img src="/wp-content/themes/polylog/img/components/logo/polylog-logo.svg" width="143" height="40" alt="Логотип Polylog">
+				</a> -->
+				<a class="header__logo" href="/">
+				<img src="/wp-content/themes/polylog/img/components/logo/polylog-logo.svg" width="143" height="40" alt="Логотип Polylog">
 				</a>
 				<div class="header__nav">
 					<button class="header__toggle" type="button"><span></span></button>
@@ -51,6 +54,9 @@
 						<div class="header__menu-top">
 							<button class="header__menu-close" type="button"></button>
 						</div>
+
+						<?php dynamic_sidebar( 'global-search' ); ?>
+
 						<?php
 							wp_nav_menu(
 								array(
@@ -62,6 +68,8 @@
 								)
 							);
 						?>
+
+						<!-- <?php echo do_shortcode( '[ivory-search id="2006"]' ); ?> -->
 					</div>
 				</div>
 			</div>

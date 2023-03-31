@@ -19,6 +19,30 @@
   pointer-events: none;
 }
 
+// New Year Logo
+
+// Markup
+// a.header__logo.is-holiday(href='/')
+//   img(src='/wp-content/themes/polylog/img/components/logo/polylog-logo-ny.svg' width='144' height='44' alt='Логотип Polylog')
+// w=144, h=44 !
+
+// .header__logo.is-holiday {
+//   position: relative;
+
+//   &::after {
+//     background: url('/wp-content/themes/polylog/img/components/logo/polylog-logo-ny-bg.svg') no-repeat 100% 100%;
+//     content: '';
+//     position: absolute;
+//     right: -5.1rem;
+//     bottom: -4rem;
+//     width: 100vw;
+//     max-width: 24rem;
+//     height: 100vh;
+//     max-height: 20rem;
+//     z-index: -1;
+//   }
+// }
+
 .header__toggle {
   margin: 0;
   padding: 0;

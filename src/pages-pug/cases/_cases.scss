@@ -26,7 +26,9 @@
 // SINGLE
 // -----------------------------------------------------------------------------
 
-.case {
+.case,
+.container.case {
+  background-color: #fc0;
   margin-bottom: $size-line * 2;
   width: auto;
 
@@ -147,6 +149,16 @@
 .case__content {
   margin: 0 auto;
   width: 90%;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 420px;
+    width: 545px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-left: 533px;
+    width: 707px;
+  }
 }
 
 .case__section,
@@ -292,11 +304,6 @@
     width: 36px;
   }
 
-  .case__content {
-    width: 545px;
-    margin: 0;
-  }
-
   .case__content-main {
     padding: 0 83px;
   }
@@ -381,10 +388,6 @@
 
   .case__request {
     padding: 40px;
-  }
-
-  .case__content {
-    width: 707px;
   }
 
   .case__content-main {

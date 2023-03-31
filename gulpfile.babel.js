@@ -277,7 +277,7 @@ export const js = () => {
 // #region
 
 // Common images function
-const imgTasks = (source, subtitle, destination) =>
+const imgTasks = (source, subtitle) =>
   src(source)
     .pipe(changed(paths.img.dest))
     .pipe(
@@ -409,9 +409,12 @@ export const watchForChanges = () => {
   watch(paths.css.watch, css);
   watch(paths.js.watch, series(js, reload));
   watch(paths.img.watch, series(img, reload));
-  watch(paths.twig.watch, series(twig));
+  watch(paths.pug.watch, series(pug));
   // Reload page only HTML has ready
-  watch(`${paths.twig.dest}/**/*.html`, reload);
+  watch(`${paths.pug.dest}/**/*.html`, reload);
+
+  // watch(paths.twig.watch, series(twig));
+  // watch(`${paths.twig.dest}/**/*.html`, reload);
 };
 
 // #endregion
@@ -431,6 +434,7 @@ const dev = series(
   watchForChanges
 );
 
+exports.w = watchForChanges;
 exports.s = dev;
 
 export const build = series(clean, sprite, parallel(css, js, img));

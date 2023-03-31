@@ -35,8 +35,9 @@
   font-size: var(--font-size-big);
   font-weight: bold;
   line-height: var(--font-line-height-big);
-  margin: 0 0 40px;
-  padding: 40px 0 0;
+  margin: 0;
+  padding-top: var(--space-padding-top-big);
+  padding-bottom: var(--space-padding-bottom-big);
   position: relative;
 }
 
@@ -292,9 +293,7 @@
   }
 
   .pr-teaser__blockquote {
-    margin-bottom: 0;
     padding-left: 83px;
-    padding-top: 0;
     width: 462px;
   }
 

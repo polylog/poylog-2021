@@ -92,16 +92,18 @@
   padding: 0;
 
   @include media-breakpoint-up(lg) {
+    margin-left: 0;
     position: absolute;
-    bottom: 100px;
-    left: calc(50% - 346px);
-    width: 432px;
+    bottom: 58px;
+    left: calc(50% - 398px);
+    width: 380px;
     z-index: 1;
   }
 
   @include media-breakpoint-up(xl) {
+    font-size: 3.6rem;
     bottom: 140px;
-    left: calc(50% - 384px);
+    left: calc(50% - 515px);
     width: 493px;
   }
 }

@@ -5,6 +5,32 @@
   margin-bottom: $size-line * 2;
 }
 
+// -----------------------------------------------------------------------------
+// SINGLE
+// -----------------------------------------------------------------------------
+
+.case,
+.container.case {
+  margin-bottom: $size-line * 2;
+  width: auto;
+
+  @include media-breakpoint-up(lg) {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $size-line * 3;
+    width: 960px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: $size-line * 5;
+    width: 1240px;
+  }
+}
+
+// CASE ASIDE
+// #region
+
 .case__aside {
   background-color: $color-primary;
   color: $color-ink-inverse-normal;
