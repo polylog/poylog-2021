@@ -626,7 +626,7 @@
   border: 1px solid $color-border-light;
   color: $color-ink-2ry;
   font-size: var(--font-size-big);
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   margin: 0;
   padding-top: 1.1rem;
   padding-right: $size-3;
@@ -690,7 +690,7 @@
   line-height: 1;
   color: $color-ink-base;
   border: 1px solid $color-ink-2ry;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .select2-container .form__select-popup .select2-search__field:focus {

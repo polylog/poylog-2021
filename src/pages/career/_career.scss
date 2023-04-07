@@ -5,7 +5,7 @@
 .career-teaser__text {
   font-size: var(--font-size-big);
   font-weight: bold;
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   margin-bottom: $size-4;
 }
 
@@ -36,7 +36,7 @@
 
 .career-teaser__contacts p a {
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .career-teaser__contacts p a:hover,
@@ -80,8 +80,8 @@
 .career-teaser__request:hover svg,
 .career-teaser__request:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .career-teaser__request:hover svg path,
@@ -181,7 +181,7 @@
   height: 48px;
   background-color: $color-ink-title;
   border-radius: 50%;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .career-vacancy__popup-close::before,
@@ -242,7 +242,7 @@
   margin-bottom: 12px;
   padding: 56px $size-3;
   background-color: $color-primary;
-  transition: all $motion-duration-md;
+  transition: all $duration-md;
   cursor: pointer;
 }
 
@@ -261,7 +261,7 @@
 .career-vacancy__item-title {
   font-weight: bold;
   font-size: var(--font-size-base);
-  line-height: var(--font-line-height-base);
+  line-height: var(--line-height-base);
 }
 
 .career-selection {
@@ -415,8 +415,8 @@
 .career-internship__request:hover svg,
 .career-internship__request:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .career-internship__request:hover svg path,
@@ -476,7 +476,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    transition: all $motion-duration-xl;
+    transition: all $duration-xl;
   }
 
   .career-vacancy__wrapper.active-left {
@@ -836,7 +836,7 @@
 .vac-bottom .vac-bottom__title,
 .vac-bottom__title {
   font-size: var(--font-size-big);
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   text-align: center;
   margin: 50px 0;
   width: 100%;

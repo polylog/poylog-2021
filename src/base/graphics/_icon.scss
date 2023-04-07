@@ -13,10 +13,10 @@
   // выравнивает по визуальному центру, надо
   // экспериментировать с цифровыми значениями
   vertical-align: -.4rem;
-  transition: fill $motion-duration-sm;
+  transition: fill $duration-xs;
 
-  width: $size-width-icon;
-  height: $size-width-icon;
+  width: $width-icon;
+  height: $width-icon;
 
   @media #{$mq-retina} {
     --icon-stroke-width: 1.5;

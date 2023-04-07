@@ -1,18 +1,3 @@
-/*
-TASKS:
-
-clean
-img
-js
-twig
-pug
-css
-sprite
-build
-gulp - build
-s
-*/
-
 /**
  * -----------------------------------------------------------------------------
  * 🧩 PLUGINS AND PATHS
@@ -326,7 +311,7 @@ export const img = parallel(imgGraphics, imgContent);
 
 /**
  * -----------------------------------------------------------------------------
- * ❤️ SVG SPRITE
+ * 💜 SVG SPRITE
  * -----------------------------------------------------------------------------
  */
 // #region
@@ -409,12 +394,12 @@ export const watchForChanges = () => {
   watch(paths.css.watch, css);
   watch(paths.js.watch, series(js, reload));
   watch(paths.img.watch, series(img, reload));
-  watch(paths.pug.watch, series(pug));
+  // watch(paths.pug.watch, series(pug));
   // Reload page only HTML has ready
-  watch(`${paths.pug.dest}/**/*.html`, reload);
+  // watch(`${paths.pug.dest}/**/*.html`, reload);
 
-  // watch(paths.twig.watch, series(twig));
-  // watch(`${paths.twig.dest}/**/*.html`, reload);
+  watch(paths.twig.watch, series(twig));
+  watch(`${paths.twig.dest}/**/*.html`, reload);
 };
 
 // #endregion

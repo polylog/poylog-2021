@@ -99,13 +99,14 @@ $color-highlight:                       $color-success-bg;
 // Inks are foreground colors for texts, borders, and icons.
 // In order to use the sass contrast check functions, the colors should
 // be moved to the map.
-$color-ink-title:                       $dark-max;
-$color-ink-base:                        $dark-beta;
-$color-ink-2ry:                         $dark-2ry;
-$color-ink-3ry:                         $dark-3ry;
-$color-ink-icon:                        $dark-3ry;
-$color-ink-link:                        $dark-max;
-$color-ink-highlight:                   $color-ink-primary-text;
+$color-ink-title:     $dark-max;
+$color-ink-base:      $dark-beta;
+$color-ink-2ry:       $dark-2ry;
+$color-ink-3ry:       $dark-3ry;
+$color-ink-border:    $dark-psi;
+$color-ink-icon:      $dark-3ry;
+$color-ink-link:      $dark-max;
+$color-ink-highlight: $color-ink-primary-text;
 
 $color-ink-inverse-title:               $light-max;
 $color-ink-inverse-normal:              $light-beta;
@@ -125,16 +126,17 @@ $hover-brightness:                      1.2;
 // ---------------------------------------------------------------------------
 // #region
 
-$size-half:                             .4rem;
-$size-1:                                .8rem;
-$size-1p5:                              1.2rem;
-$size-2:                                $size-1 * 2;
-$size-3:                                $size-1 * 3;
-$size-4:                                $size-1 * 4;
-$size-5:                                $size-1 * 5;
-$size-6:                                $size-1 * 6;
-$size-7:                                $size-1 * 7;
-$size-8:                                $size-1 * 8;
+$size-half: .4rem;
+$size-1:    .8rem;
+$size-1p5:  $size-1 * 1.5;
+$size-2:    $size-1 * 2;
+$size-2p5:  $size-1 * 2.5;
+$size-3:    $size-1 * 3;
+$size-4:    $size-1 * 4;
+$size-5:    $size-1 * 5;
+$size-6:    $size-1 * 6;
+$size-7:    $size-1 * 7;
+$size-8:    $size-1 * 8;
 
 // For larger values use derived lines. E.g. $size-line * 3
 $size-line:                             $size-3;
@@ -189,21 +191,24 @@ $mq-retina: 'print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.2
 // ---------------------------------------------------------------------------
 // #region
 
-$size-border-width:                     .1rem;
+$size-border-width: .1rem;
 
 // BOX BORDER RADIUS
 
 // Alerts, Cards, Rectangular Images
-$shape-border-radius-sm:                .3rem;
+$shape-border-radius-sm:   .3rem;
 
 // Buttons
-$shape-border-radius-base:              .5rem;
+$shape-border-radius-base: .5rem;
 
 // Dropdowns, Modal Bottom Sheets, Pickers, Sticky Blocks, Popovers, Tooltips
-$shape-border-radius-lg:                1.2rem;
+$shape-border-radius-lg:   1.2rem;
 
 // Modals
-$shape-border-radius-xl:                2.4rem;
+$shape-border-radius-xl:   2.4rem;
+
+// Pill Shapes
+$shape-border-radius-pill: 100vmax;
 
 // BOX SHADOWS
 // Increasing the number of shadows and decreasing the alpha value.
@@ -268,27 +273,26 @@ $zindex-modal:                          1080;
 
 // PANEL WIDTHS
 
-$size-width-xs:                         20rem;
+$width-xs:           20rem;
 
 // Tooltips, mobile drawers
-$size-width-sm:                         28rem;
+$width-sm:           28rem;
 
 // Dropdowns, popovers, tablet and desktop drawers
-$size-width:                            32rem;
+$width:              32rem;
 
 // Wide drawers, modals on tablets
-$size-width-md:                         64rem;
+$width-md:           64rem;
 
 // Modals on desktops
-$size-width-lg:                         80rem;
+$width-lg:           80rem;
 
-$size-width-readable:                   60ch;
-$size-width-readable-abs:               62.2rem;
+$width-readable:     60ch;
+$width-readable-abs: 62.2rem;
+$width-icon:         2.4rem;
 
-$size-width-icon:                       2.4rem;
-
-$chevron-down:                          url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpolygon%20fill-rule%3D%22evenodd%22%20points%3D%2216%208%2014.59%206.59%2010%2011.17%205.41%206.59%204%208%2010%2014%22%2F%3E%3C%2Fsvg%3E%0A');
-$chevron-right:                         url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpolygon%20fill-rule%3D%22evenodd%22%20points%3D%228%204%206.59%205.41%2011.17%2010%206.59%2014.59%208%2016%2014%2010%22%2F%3E%3C%2Fsvg%3E');
+$chevron-down:       url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpolygon%20fill-rule%3D%22evenodd%22%20points%3D%2216%208%2014.59%206.59%2010%2011.17%205.41%206.59%204%208%2010%2014%22%2F%3E%3C%2Fsvg%3E%0A');
+$chevron-right:      url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpolygon%20fill-rule%3D%22evenodd%22%20points%3D%228%204%206.59%205.41%2011.17%2010%206.59%2014.59%208%2016%2014%2010%22%2F%3E%3C%2Fsvg%3E');
 
 // #endregion
 
@@ -297,38 +301,33 @@ $chevron-right:                         url('data:image/svg+xml;charset=UTF-8,%3
 // ---------------------------------------------------------------------------
 // #region
 
-// Use shorter for disappearing  elements. To do that set transitions on both
-// states, like this:
-// .el { transition: all $motion-duration-sm $motion-easing-disappearance; }
-// .el.is-hidden { transition: all $motion-duration-md $motion-easing-appearance; }
-$motion-duration-xs:                    .1s;
+// Micro-interactions such as button and toggle
+$duration-xxs:       .07s;
 
-// Medium elements changing states
-// and disappearance
-$motion-duration-sm:                    .2s;
+// Micro-interactions such as fade
+$duration-xs:        .11s;
 
-// Medium elements appearance,
-// large elements changing states
-// and disappearance
-$motion-duration-base:                  .25s;
+// Micro-interactions, small expansion, short distance movements
+$duration-sm:        .15s !default;
 
-// Medium to large elements appearance
-$motion-duration-md:                    .3s;
+// Expansion, system communication, toast
+$duration-md:        .24s !default;
 
-// Large elements appearance
-$motion-duration-lg:                    .5s;
-$motion-duration-xl:                    .8s;
+// Large expansion, important system notifications
+$duration-lg:        .4s !default;
 
-$motion-duration-huge:                  5s;
-$motion-duration-king-size:             7s;
+// Background dimming
+$duration-xl:        .7s !default;
 
-$motion-easing-base:                    cubic-bezier(.4, 0, .2, 1); // accented ease-in-out
-$motion-easing-appearance:              cubic-bezier(0, 0, .2, 1); // accented ease-out
-$motion-easing-disappearance:           cubic-bezier(.4, 0, 1, 1); // ease-in
-$motion-easing-bounce:                  cubic-bezier(.175, .885, .32, 1.275);
+$duration-huge:      $duration-xl * 7;
+$duration-king-size: $duration-xl * 10;
+
+$easing-base:          cubic-bezier(.4, 0, .2, 1);            // accented ease-in-out
+$easing-appearance:    cubic-bezier(0, 0, .2, 1);             // accented ease-out
+$easing-disappearance: cubic-bezier(.4, 0, 1, 1);             // ease-in
+$easing-bounce:        cubic-bezier(.175, .885, .32, 1.275);
 
 // #endregion
-
 
 // ---------------------------------------------------------------------------
 // 🔠 TYPOGRAPHY & PADDING
@@ -361,138 +360,105 @@ $font-family-serif:
  'Noto Color Emoji';
 
 :root {
-  --asset-data-image-list-bullet:       url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%225%22%20height%3D%227%22%20viewBox%3D%220%200%205%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2.5%205C3.88071%205%205%203.88071%205%202.5C5%201.11929%203.88071%200%202.5%200C1.11929%200%200%201.11929%200%202.5C0%203.88071%201.11929%205%202.5%205Z%22%20fill%3D%22%23FF3300%22%2F%3E%3C%2Fsvg%3E%0A');
+  --list-bullet:                  url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%225%22%20height%3D%227%22%20viewBox%3D%220%200%205%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2.5%205C3.88071%205%205%203.88071%205%202.5C5%201.11929%203.88071%200%202.5%200C1.11929%200%200%201.11929%200%202.5C0%203.88071%201.11929%205%202.5%205Z%22%20fill%3D%22%23FF3300%22%2F%3E%3C%2Fsvg%3E%0A');
 
-  --font-family-base:                   #{$font-family-base};
-  --font-family-title:                  #{$font-family-title};
+  --font-family-base:             #{$font-family-base};
+  --font-family-title:            #{$font-family-title};
 
-  --font-scale-factor:                  1.333; // 3:4, perfect fourth
+  --font-scale-factor:            1.333;                                                                                                                                                                                                                                                                                                                                                                                                                       // 3:4, perfect fourth
 
-  --font-size-adaptive-1:               1.6vh;
-  --font-size-adaptive-1d5:             2.4vh;
-  --font-size-adaptive-3:               3.2vh;
-  --font-size-adaptive-100:             16vh;
-  --font-size-adaptive-150:             24vh;
+  --font-size-adaptive-1:         1.6vh;
+  --font-size-adaptive-1d5:       2.4vh;
+  --font-size-adaptive-3:         3.2vh;
+  --font-size-adaptive-100:       16vh;
+  --font-size-adaptive-150:       24vh;
 
-  --font-size-jumbo:                    6.8rem;
-  // Keep parentheses to do math using interpolation
-  --font-line-height-jumbo:             #{math.div(72, 68)};
-  --space-padding-top-jumbo:            1.3rem;
-  --space-padding-bottom-jumbo:         1.2rem;
+  --font-size-jumbo:              6.8rem;
+  --line-height-jumbo:            #{math.div(72, 68)};
+  --padding-top-jumbo:            1.3rem;
+  --padding-bottom-jumbo:         1.2rem;
 
-  --font-size-hero-title:               5.1rem;
-  --font-weight-hero-title:             800;
-  --font-line-height-hero-title:        #{math.div(56, 51)};
-  --space-padding-top-hero-title:       .3rem;
-  --space-padding-bottom-hero-title:    1.4rem;
+  --font-size-hero:               5.1rem;
+  --font-weight-hero:             800;
+  --line-height-hero:             #{math.div(56, 51)};
+  --padding-top-hero:             .3rem;
+  --padding-bottom-hero:          1.4rem;
 
-  --font-size-title:                    3.8rem;
-  --font-line-height-title:             #{math.div(40, 38)};
-  --font-weight-title:                  800;
-  --space-padding-top-title:            1.5rem;
-  --space-padding-bottom-title:         1.8rem;
-  --space-margin-top-title-has-eyebrow: #{-$size-line};
+  --font-size-title:              3.8rem;
+  --line-height-title:            #{math.div(40, 38)};
+  --font-weight-title:            800;
+  --padding-top-title:            1.5rem;
+  --padding-bottom-title:         1.8rem;
+  --margin-top-title-has-eyebrow: #{-$size-line};
 
-  --font-size-subhead-h2:               2.8rem;
-  --font-line-height-subhead-h2:        #{math.div(32, 28)};
-  --font-weight-subhead-h2:             800;
-  --space-padding-top-subhead-h2:       2.2rem;
-  --space-padding-bottom-subhead-h2:    1.8rem;
-  --margin-top-subhead-h2:              #{$size-line};
+  --font-size-subhead-h2:         2.8rem;
+  --line-height-subhead-h2:       #{math.div(32, 28)};
+  --font-weight-subhead-h2:       800;
+  --padding-top-subhead-h2:       2.2rem;
+  --padding-bottom-subhead-h2:    1.8rem;
+  --margin-top-subhead-h2:        #{$size-line};
 
-  --font-size-big:                      2.1rem;
-  --font-line-height-big:               #{math.div(24, 21)};
-  --font-weight-big:                    800;
-  --space-padding-top-big:              .7rem;
-  --space-padding-bottom-big:           1.7rem;
+  --font-size-big:                2.1rem;
+  --line-height-big:              #{math.div(24, 21)};
+  --font-weight-big:              800;
+  --padding-top-big:              .7rem;
+  --padding-bottom-big:           1.7rem;
 
-  --font-size-big-static:               2.1rem;
-  --font-line-height-big-static:        #{math.div(24, 21)};
-  --space-padding-top-big-static:       .7rem;
-  --space-padding-bottom-big-static:    1.7rem;
+  --font-size-big-static:         2.1rem;
+  --line-height-big-static:       #{math.div(24, 21)};
+  --padding-top-big-static:       .7rem;
+  --padding-bottom-big-static:    1.7rem;
 
-  --font-size-base:                     1.6rem;
-  --font-line-height-base:              1.5;
-  --font-weight-base:                   normal;
-  --space-padding-top-base:             .8rem;
-  --space-padding-bottom-base:          1.6rem;
+  --font-size-base:               1.6rem;
+  --line-height-base:             1.5;
+  --font-weight-base:             normal;
+  --padding-top-base:             .8rem;
+  --padding-bottom-base:          1.6rem;
 
-  --font-size-small:                    1.2rem;
-  --font-line-height-small:             #{math.div(16, 12)};
-  --space-padding-top-small:            1.3rem;
-  --space-padding-bottom-small:         2rem;
+  --font-size-small:              1.2rem;
+  --line-height-small:            #{math.div(16, 12)};
+  --padding-top-small:            1.3rem;
+  --padding-bottom-small:         2rem;
+
+  // Container
+  --padding-x-container:          #{$size-2p5};
 
   // Table
-  --space-margin-top-table:             #{$size-line};
-  --space-margin-bottom-table:          #{$size-line};
-  --space-padding-x-cell:               #{$size-2};
-  --space-padding-y-cell:               1.1rem;
+  --margin-top-table:             #{$size-line};
+  --margin-bottom-table:          #{$size-line};
+  --padding-x-cell:               #{$size-2};
+  --padding-y-cell:               1.1rem;
 
   @media screen and (min-width: #{map-get($grid-breakpoints, 'lg')}) {
     --font-scale-factor:                1.667; // 3:5, major six
 
     --font-size-jumbo:                  20.5rem;
-    --font-line-height-jumbo:           #{math.div(208, 205)};
-    --space-padding-top-jumbo:          1.6rem;
-    --space-padding-bottom-jumbo:       1.7rem;
+    --line-height-jumbo:           #{math.div(208, 205)};
+    --padding-top-jumbo:          1.6rem;
+    --padding-bottom-jumbo:       1.7rem;
 
-    --font-size-hero-title:             12.3rem;
-    --font-line-height-hero-title:      #{math.div(128, 123)};
-    --space-padding-top-hero-title:     1.3rem;
-    --space-padding-bottom-hero-title:  .3rem;
+    --font-size-hero:             12.3rem;
+    --line-height-hero:      #{math.div(128, 123)};
+    --padding-top-hero:     1.3rem;
+    --padding-bottom-hero:  .3rem;
 
     --font-size-title:                  7.4rem;
-    --font-line-height-title:           #{math.div(80, 74)};
-    --space-padding-top-title:          .6rem;
-    --space-padding-bottom-title:       1rem;
+    --line-height-title:           #{math.div(80, 74)};
+    --padding-top-title:          .6rem;
+    --padding-bottom-title:       1rem;
 
     --font-size-subhead-h2:             4.4rem;
-    --font-line-height-subhead-h2:      #{math.div(48, 44)};
-    --space-padding-top-subhead-h2:     .9rem;
-    --space-padding-bottom-subhead-h2:  1.6rem;
+    --line-height-subhead-h2:      #{math.div(48, 44)};
+    --padding-top-subhead-h2:     .9rem;
+    --padding-bottom-subhead-h2:  1.6rem;
 
     --font-size-big:                    2.7rem;
-    --font-line-height-big:             #{math.div(32, 27)};
-    --space-padding-top-big:            .1rem;
-    --space-padding-bottom-big:         1.5rem;
+    --line-height-big:             #{math.div(32, 27)};
+    --padding-top-big:            .1rem;
+    --padding-bottom-big:         1.5rem;
+
+    --padding-x-container:        #{$size-2p5};
   }
 }
 // #endregion
 
-
-// -----------------------------------------------------------------------------
-// 🌓 DARK THEME
-// -----------------------------------------------------------------------------
-// #region
-
-// // SYSTEM SETTINGS LEVEL
-// // Tis block should be nested in :root
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --color-primary:                    #{$blue};
-//     --color-secondary:                  #{$green};
-//     --color-bg-normal:                  #{$dark-max};
-//     --color-bg-accent:                  var(--color-primary-darkest);
-//     --color-ink-normal:                 #{$light-max};
-//     --color-ink-muted:                  #{$light-2ry};
-//   }
-
-//   // Or use filter for minimum viable dark mode. hue-rotate is optional
-//   filter: invert(90%) hue-rotate(25deg);
-
-//   img, video, iframe {
-//     filter: invert(100%) hue-rotate(-25deg);
-//   }
-
-// // SITE/APP LEVEL
-// This block should be on the same level as a :root
-// html[data-theme='dark'] {
-//   --color-primary:                    #{$blue};
-//   --color-secondary:                  #{$green};
-//   --color-bg-normal:                  #{$dark-max};
-//   --color-bg-accent:                  var(--color-primary-darkest);
-//   --color-ink-normal:                 #{$light-max};
-//   --color-ink-muted:                  #{$light-2ry};
-// }
-
-// #endregion

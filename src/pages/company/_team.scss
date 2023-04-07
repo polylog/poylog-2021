@@ -70,9 +70,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-big);
   font-weight: 800;
-  line-height: var(--font-line-height-big);
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  line-height: var(--line-height-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
   margin-top: $size-line;
   padding: 0;
 
@@ -202,7 +202,7 @@
   color: $color-primary;
   text-transform: uppercase;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .agency-conclusion__vacancies svg {
@@ -214,7 +214,7 @@
 
 .agency-conclusion__vacancies svg path {
   fill: $color-primary;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .agency-conclusion__vacancies:hover,
@@ -225,8 +225,8 @@
 .agency-conclusion__vacancies:hover svg,
 .agency-conclusion__vacancies:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .agency-conclusion__vacancies:hover svg path,

@@ -1,7 +1,7 @@
 .anim-right {
   transform: translateX(-60%);
   opacity: 0;
-  transition: all $motion-duration-xl;
+  transition: all $duration-xl;
 }
 
 .anim-right.active {
@@ -12,7 +12,7 @@
 .anim-left {
   transform: translateX(60%);
   opacity: 0;
-  transition: all $motion-duration-xl;
+  transition: all $duration-xl;
 }
 
 .anim-left.active {
@@ -23,7 +23,7 @@
 .anim-top {
   transform: translateY(60%);
   opacity: 0;
-  transition: all $motion-duration-xl;
+  transition: all $duration-xl;
 }
 
 .anim-top.active {
@@ -34,7 +34,7 @@
 .anim-bottom {
   transform: translateY(-60%);
   opacity: 0;
-  transition: all $motion-duration-xl;
+  transition: all $duration-xl;
 }
 
 .anim-bottom.active {
@@ -45,7 +45,7 @@
 .anim-scale-bottom {
   transform-origin: top center;
   transform: scaleY(.4) translateY(-60%);
-  transition: all $motion-duration-xl;
+  transition: all $duration-xl;
 }
 
 .anim-scale-bottom.active {
@@ -55,7 +55,7 @@
 .anim-scale-opacity {
   transform: scale(0);
   opacity: 0;
-  transition: all $motion-duration-xl;
+  transition: all $duration-xl;
 }
 
 .anim-scale-opacity.active {
@@ -65,7 +65,7 @@
 
 .anim-opacity {
   opacity: 0;
-  transition: all $motion-duration-xl;
+  transition: all $duration-xl;
 }
 
 .anim-opacity.active {
@@ -206,10 +206,10 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-big);
   font-weight: 800;
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   margin: 0;
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
   overflow: hidden;
   text-transform: uppercase;
   white-space: nowrap;

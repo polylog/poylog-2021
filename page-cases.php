@@ -31,13 +31,13 @@ while ( have_posts() ) {
 	</style>
 
 	<main class="main main-inner main-cases">
-		<h1 class="visually-hidden">
+		<h1 class="sr-only">
 			<?php the_title(); ?>
 		</h1>
 		<div class="cases-wrapper">
 
 			<section class="all-cases">
-				<h2 class="visually-hidden">
+				<h2 class="sr-only">
 					<?php the_title(); ?>
 				</h2>
 

@@ -10,10 +10,10 @@
   align-items: flex-start;
   justify-content: center;
   font-family: var(--font-family-title);
-  font-size: var(--font-size-hero-title);
-  line-height: var(--font-line-height-hero-title);
-  padding-top: var(--space-padding-top-hero-title);
-  padding-bottom: var(--space-padding-bottom-hero-title);
+  font-size: var(--font-size-hero);
+  line-height: var(--line-height-hero);
+  padding-top: var(--padding-top-hero);
+  padding-bottom: var(--padding-bottom-hero);
   overflow: hidden;
   pointer-events: none;
   position: relative;
@@ -85,9 +85,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-big);
   font-weight: 800;
-  line-height: var(--font-line-height-big);
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  line-height: var(--line-height-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
   margin-top: $size-line;
   padding: 0;
 
@@ -135,9 +135,9 @@
   align-items: flex-start;
   font-family: var(--font-family-title);
   font-size: var(--font-size-jumbo);
-  line-height: var(--font-line-height-jumbo);
-  padding-top: var(--space-padding-top-jumbo);
-  padding-bottom: var(--space-padding-bottom-jumbo);
+  line-height: var(--line-height-jumbo);
+  padding-top: var(--padding-top-jumbo);
+  padding-bottom: var(--padding-bottom-jumbo);
   margin-bottom: -36px;
   overflow: hidden;
   pointer-events: none;
@@ -205,9 +205,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-big);
   font-weight: 800;
-  line-height: var(--font-line-height-big);
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  line-height: var(--line-height-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
   margin-bottom: $size-5;
 
   @include media-breakpoint-up(lg) {
@@ -232,12 +232,12 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-big-static);
   font-weight: 800;
-  line-height: var(--font-line-height-big-static);
-  padding-top: var(--space-padding-top-big-static);
-  padding-bottom: var(--space-padding-bottom-big-static);
+  line-height: var(--line-height-big-static);
+  padding-top: var(--padding-top-big-static);
+  padding-bottom: var(--padding-bottom-big-static);
   text-decoration: none;
   text-transform: uppercase;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .agency-conclusion__vacancies svg {
@@ -249,7 +249,7 @@
 
 .agency-conclusion__vacancies svg path {
   fill: $color-primary;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .agency-conclusion__vacancies:hover,
@@ -260,8 +260,8 @@
 .agency-conclusion__vacancies:hover svg,
 .agency-conclusion__vacancies:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .agency-conclusion__vacancies:hover svg path,

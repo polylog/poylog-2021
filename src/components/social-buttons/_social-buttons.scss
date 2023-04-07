@@ -18,7 +18,7 @@
 
 .social__link {
   display: block;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .social__link svg {
@@ -28,7 +28,7 @@
 }
 
 .social__link svg path {
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .social__link:hover,

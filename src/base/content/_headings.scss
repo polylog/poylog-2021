@@ -16,13 +16,13 @@ h2, .h2, %h2 {
 h1, .h1, %h1 {
   font-size: var(--font-size-title);
   font-weight: var(--font-weight-title);
-  line-height: var(--font-line-height-title);
+  line-height: var(--line-height-title);
   margin: 0;
-  padding-top: var(--space-padding-top-title);
-  padding-bottom: var(--space-padding-bottom-title);
+  padding-top: var(--padding-top-title);
+  padding-bottom: var(--padding-bottom-title);
 
   .eyebrow + & {
-    margin-top: var(--space-margin-top-title-minus);
+    margin-top: var(--margin-top-title-minus);
   }
 }
 
@@ -38,13 +38,13 @@ h1, .h1, %h1 {
 h2, .h2, %h2 {
   font-size: var(--font-size-subhead-h2);
   font-weight: var(--font-weight-subhead-h2);
-  line-height: var(--font-line-height-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
   margin: 0;
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
 
   &:not(:first-child):not([class]) {
-    margin-top: var(--space-margin-top-h2-plus);
+    margin-top: var(--margin-top-h2-plus);
   }
 }
 
@@ -86,7 +86,7 @@ h2:empty {
 
   h4 {
     font-size: var(--font-size-base);
-    line-height: var(--font-line-height-base);
+    line-height: var(--line-height-base);
     margin: $size-2 0;
   }
 
@@ -137,20 +137,20 @@ h2:empty {
 
 h3, .h3, %big {
   font-size: var(--font-size-big);
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   margin: 0;
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
 }
 
 h4, h5, h6 {
   font-size: 100%;
-  line-height: var(--font-line-height-base);
-  padding-top: var(--space-padding-top-base);
-  padding-bottom: var(--space-padding-bottom-base);
+  line-height: var(--line-height-base);
+  padding-top: var(--padding-top-base);
+  padding-bottom: var(--padding-bottom-base);
 
   &:not(:first-child):not([class]) {
-    margin-top: var(--space-margin-top-subhead-plus);
+    margin-top: var(--margin-top-subhead-plus);
   }
 }
 
@@ -160,6 +160,6 @@ h4, h5, h6 {
   margin: 0;
 
   &:not(:first-child):not([class]) {
-    margin-top: var(--space-margin-top-subhead-plus);
+    margin-top: var(--margin-top-subhead-plus);
   }
 }

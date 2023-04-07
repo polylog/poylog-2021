@@ -72,22 +72,22 @@
   display: block;
   width: 100%;
   height: auto;
-  transition: opacity 2s $motion-easing-base;
+  transition: opacity 2s $easing-base;
 }
 
 .main-screen__image img:nth-of-type(1) {
   animation-name: fade;
-  animation-timing-function: $motion-easing-base;
+  animation-timing-function: $easing-base;
   animation-iteration-count: infinite;
-  animation-duration: $motion-duration-king-size;
+  animation-duration: $duration-king-size;
   animation-direction: alternate;
 }
 
 .main-screen__image img:nth-of-type(2) {
   animation-name: fade;
-  animation-timing-function: $motion-easing-base;
+  animation-timing-function: $easing-base;
   animation-iteration-count: infinite;
-  animation-duration: $motion-duration-king-size;
+  animation-duration: $duration-king-size;
   animation-direction: alternate-reverse;
 }
 
@@ -134,7 +134,7 @@
   line-height: 1.1;
   color: $color-ink-title;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .main-screen__languages-link:hover,
@@ -160,7 +160,7 @@
   line-height: 1.1;
   color: $color-ink-title;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .main-screen__contacts svg {
@@ -183,8 +183,8 @@
 .main-screen__contacts:hover svg,
 .main-screen__contacts:focus svg {
   animation-name: bounce;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .main-screen__request {
@@ -211,8 +211,8 @@
 .main-screen__request:hover svg,
 .main-screen__request:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .main-screen__request:hover svg path,
@@ -265,7 +265,7 @@
     line-height: 1.1;
     color: $color-ink-title;
     text-decoration: none;
-    transition: all $motion-duration-xs;
+    transition: all $duration-xxs;
   }
 
   .main-screen__tel:hover,

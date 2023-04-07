@@ -38,7 +38,7 @@
   margin-top: $size-2;
   margin-right: $size-1;
   font-size: var(--font-size-base);
-  line-height: var(--font-line-height-base);
+  line-height: var(--line-height-base);
   content: counter(item, decimal-leading-zero) ' ';
   counter-increment: item;
 }
@@ -52,7 +52,7 @@
   font-size: 28px;
   line-height: 1.1;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .portfolio-main__link img {
@@ -62,7 +62,7 @@
   display: block;
   width: 80px;
   height: auto;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
   opacity: 0;
   transform: scaleY(0);
   transform-origin: bottom;
@@ -163,7 +163,7 @@
 .card-block__link {
   display: block;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .card-block__link:hover,
@@ -186,14 +186,14 @@
   width: 100%;
   height: auto;
   margin-bottom: $size-3;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .card-block__caption {
   font-weight: bold;
   font-size: var(--font-size-big);
   line-height: 1.1;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 @include media-breakpoint-up(lg) {

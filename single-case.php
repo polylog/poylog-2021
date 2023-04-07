@@ -28,7 +28,7 @@ while ( have_posts() ) :
 					<?php endif; ?>
 				</div>
 
-				<button class="btn case__request form-request__open" type="button">
+				<button class="btn is-lg case__request form-request__open" type="button">
 					<span>
 						<?php
 						$case_sidebar_button = get_field( 'case_sidebar_button' ) ? get_field( 'case_sidebar_button' ) : 'Давайте работать';

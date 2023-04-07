@@ -141,6 +141,11 @@
       ]
     }
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "prettier": {
     "singleQuote": true,
     "bracketSpacing": true,

@@ -19,7 +19,7 @@
 							<iframe src="https://snazzymaps.com/embed/266970" title="Карта: Москва, Центр международной торговли, PR-агентство «Полилог»"></iframe>
 						</div>
 
-						<button class="btn footer-request footer-request--mob form-request__open" type="button">
+						<button class="btn is-lg footer-request footer-request--mob form-request__open" type="button">
 							<span>Заявка</span>
 							<svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/>
@@ -124,7 +124,7 @@
 					<div class="footer-additional__copyright"><?php the_field( 'copyright', 'options' ); ?></div><a class="footer-additional__privacy" href="<?php echo esc_url( get_permalink( 3 ) ); ?>">Политика конфиденциальности</a>
 				</div>
 
-				<button class="btn footer-request footer-request--des form-request__open" type="button">
+				<button class="btn is-lg footer-request footer-request--des form-request__open" type="button">
 					<span>Заявка</span>
 					<svg width="38" height="27" viewBox="0 0 38 27" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/>
@@ -212,7 +212,7 @@
 						<div class="footer-contacts__map">
 							<?php the_field( 'map', 'options' ); ?>
 						</div>
-						<button class="btn footer-request footer-request--mob form-request__open" type="button">
+						<button class="btn is-lg footer-request footer-request--mob form-request__open" type="button">
 							<span><?php the_field( 'footer_button' ); ?></span>
 							<svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/></svg>
 						</button>
@@ -319,7 +319,7 @@
 					unset( $footer_policy, $footer_policy_name );
 					?>
 				</div>
-				<button class="btn footer-request footer-request--des form-request__open" type="button">
+				<button class="btn is-lg footer-request footer-request--des form-request__open" type="button">
 					<span><?php the_field( 'footer_button' ); ?></span>
 					<svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/></svg>
 				</button>

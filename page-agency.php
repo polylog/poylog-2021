@@ -12,7 +12,7 @@ while ( have_posts() ) :
 	the_post();
 	?>
 <main class="main main-inner main-agency">
-	<h1 class="visually-hidden">
+	<h1 class="sr-only">
 		<?php the_title(); ?>
 	</h1>
 	<div class="agency">

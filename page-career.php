@@ -13,7 +13,7 @@ while ( have_posts() ) {
 	the_post();
 	?>
 	<main class="main main-inner main-career">
-			<h1 class="visually-hidden"><?php the_title(); ?></h1>
+			<h1 class="sr-only"><?php the_title(); ?></h1>
 			<div class="career">
 				<div class="additional-menu">
 					<div class="container">
@@ -24,7 +24,7 @@ while ( have_posts() ) {
 					</div>
 				</div>
 				<section class="career-teaser">
-					<h2 class="visually-hidden">О работе в Polylog</h2>
+					<h2 class="sr-only">О работе в Polylog</h2>
 					<div class="container">
 						<div class="career-teaser__wrapper">
 							<div class="career-teaser__info">
@@ -49,7 +49,7 @@ while ( have_posts() ) {
 							if ( $ajob_photo = get_field('ajob_photo') )
 								echo '<img class="career-teaser__image" src="'.kama_thumb_src('src='.$ajob_photo.'&w=596&h=686').'" width="" height="" srcset="'.kama_thumb_src('src='.$ajob_photo.'&w=1192&h=1372').' 2x, '.kama_thumb_src('src='.$ajob_photo.'&w=1788&h=2058').' 3x" alt=""/>';
 							?>
-								<button class="btn career-teaser__request form-request__open" type="button"><span><?php echo ( $ajob_button = get_field('ajob_button') ) ? : 'Отправить резюме'; ?></span><svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<button class="btn is-lg career-teaser__request form-request__open" type="button"><span><?php echo ( $ajob_button = get_field('ajob_button') ) ? : 'Отправить резюме'; ?></span><svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/>
 									</svg>
 								</button>
@@ -139,7 +139,7 @@ while ( have_posts() ) {
 				} ?>
 				</section>
 				<section class="career-selection">
-					<h2 class="visually-hidden">Система отбора кандидатов</h2>
+					<h2 class="sr-only">Система отбора кандидатов</h2>
 					<div class="container career-selection__wrapper">
 						<div class="career-selection__teaser">
 							<div class="career-selection__title"><?php the_field('system_text'); ?></div><?php
@@ -210,7 +210,7 @@ while ( have_posts() ) {
 							<div class="career-internship__resume"><?php if ( $feature_image = get_field('feature_image') )
 								echo '<img class="career-internship__resume-image" src="'.kama_thumb_src('src='.$feature_image.'&w=600&h=750').'" width="" height="" srcset="'.kama_thumb_src('src='.$feature_image.'&w=1200&h=1500').' 2x, '.kama_thumb_src('src='.$feature_image.'&w=1800&h=2250').' 3x" alt=""/>';
 								?>
-								<button class="btn career-internship__request form-request__open" type="button"><span><?php echo ( $feature_button = get_field('feature_button') ) ? : 'Отправить резюме'; ?></span><svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/></svg></button>
+								<button class="btn is-lg career-internship__request form-request__open" type="button"><span><?php echo ( $feature_button = get_field('feature_button') ) ? : 'Отправить резюме'; ?></span><svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/></svg></button>
 							</div>
 						</div>
 					</div>

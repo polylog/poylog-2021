@@ -38,9 +38,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
   font-weight: 800;
-  line-height: var(--font-line-height-title);
-  padding-top: var(--space-padding-top-title);
-  padding-bottom: var(--space-padding-bottom-title);
+  line-height: var(--line-height-title);
+  padding-top: var(--padding-top-title);
+  padding-bottom: var(--padding-bottom-title);
   text-transform: uppercase;
   white-space: nowrap;
   margin: 0;
@@ -74,29 +74,29 @@
   display: block;
   width: 100%;
   height: auto;
-  transition: opacity 2s $motion-easing-base;
+  transition: opacity 2s $easing-base;
 }
 
 .main-screen__image img:nth-of-type(1) {
   animation-name: fade;
-  animation-timing-function: $motion-easing-base;
+  animation-timing-function: $easing-base;
   animation-iteration-count: infinite;
-  animation-duration: $motion-duration-king-size;
+  animation-duration: $duration-king-size;
   animation-direction: alternate;
 }
 
 .main-screen__image img:nth-of-type(2) {
   animation-name: fade;
-  animation-timing-function: $motion-easing-base;
+  animation-timing-function: $easing-base;
   animation-iteration-count: infinite;
-  animation-duration: $motion-duration-king-size;
+  animation-duration: $duration-king-size;
   animation-direction: alternate-reverse;
 }
 
 .main-screen__image-text {
   font-weight: bold;
   font-size: var(--font-size-base);
-  line-height: var(--font-line-height-base);
+  line-height: var(--line-height-base);
   text-align: center;
   min-height: 55px;
 
@@ -137,7 +137,7 @@
   line-height: 1.1;
   color: $color-ink-title;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .main-screen__languages-link:hover,
@@ -163,10 +163,10 @@
     font-family: var(--font-family-title);
     font-size: var(--font-size-big);
     font-weight: 800;
-    line-height: var(--font-line-height-big);
+    line-height: var(--line-height-big);
     text-decoration: none;
     margin: 0 $size-5;
-    transition: all $motion-duration-xs;
+    transition: all $duration-xxs;
   }
 
   @include media-breakpoint-up(xl) {
@@ -194,8 +194,8 @@
 .main-screen__contacts:hover svg,
 .main-screen__contacts:focus svg {
   animation-name: bounce;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .main-screen__request {
@@ -222,8 +222,8 @@
 .main-screen__request:hover svg,
 .main-screen__request:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .main-screen__request:hover svg path,
@@ -272,7 +272,7 @@
     line-height: 1.1;
     color: $color-ink-title;
     text-decoration: none;
-    transition: all $motion-duration-xs;
+    transition: all $duration-xxs;
   }
 
   .main-screen__tel:hover,

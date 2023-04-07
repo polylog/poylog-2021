@@ -28,6 +28,11 @@
   }
 }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 // -----------------------------------------------------------------------------
 // FIGURES & IFRAMES
 // -----------------------------------------------------------------------------
@@ -44,8 +49,8 @@ iframe {
 
 figcaption {
   color: $color-ink-2ry;
-  padding-top: var(--space-padding-top-base);
-  padding-bottom: var(--space-padding-bottom-base);
+  padding-top: var(--padding-top-base);
+  padding-bottom: var(--padding-bottom-base);
 }
 
 // -----------------------------------------------------------------------------

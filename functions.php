@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:ignore
 /**
  * Polylog functions and definitions
  *
@@ -6,6 +6,8 @@
  *
  * @package Polylog
  */
+
+// phpcs:disable Generic.Files.OneObjectStructurePerFile.MultipleFound, Squiz.PHP.CommentedOutCode.Found
 
 /**
  * -----------------------------------------------------------------------------
@@ -121,18 +123,6 @@ function polylog_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-
-	register_sidebar(
-		array_merge(
-			array(
-				'name'        => __( 'Global Search', 'polylog' ),
-				'id'          => 'global-search',
-				'description' => __( 'Add main form search here.', 'polylog' ),
-				'before_widget' => '',
-				'after_widget'  => '',
-			)
-		)
-	);
 }
 
 add_action( 'widgets_init', 'polylog_widgets_init' );
@@ -162,8 +152,9 @@ function polylog_assets() {
 	add_action( 'wp_footer', 'wp_enqueue_scripts', 5 );
 	add_action( 'wp_footer', 'wp_print_head_scripts', 5 );
 
-	wp_enqueue_script( 'polylog-bundle', get_template_directory_uri() . '/js/bundle.min.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'polylog-app', get_template_directory_uri() . '/js/app.min.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'polylog-bundle', get_template_directory_uri() . '/js/bundle.min.js', array(), $ver, true );
+	wp_enqueue_script( 'polylog-app', get_template_directory_uri() . '/js/app.min.js', array(), $ver, true );
+	wp_enqueue_script( 'polylog-add-on', get_template_directory_uri() . '/js/add-on.js', array(), $ver, true );
 
 	if ( is_category() ) {
 		wp_enqueue_script( 'polylog-load-more', get_template_directory_uri() . '/js/load_more.js', array(), '1.0.0', true );
@@ -206,11 +197,11 @@ function polylog_cleanup() {
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
 	remove_action( 'wp_head', 'index_rel_link' );
 	remove_action( 'wp_head', 'wlwmanifest_link' );
-	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
-	remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
-	remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 );
-	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+	remove_action( 'wp_head', 'start_post_rel_link', 10 );
+	remove_action( 'wp_head', 'parent_post_rel_link', 10 );
+	remove_action( 'wp_head', 'adjacent_posts_rel_link', 10 );
+	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
+	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10 );
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'wp_head', 'rel_canonical' );
 	remove_action( 'wp_head', 'rel_alternate' );
@@ -467,13 +458,50 @@ add_action( 'admin_bar_menu', 'polylog_remove_toolbar_items', 999 );
  * @param array|string $tag script or style tag.
  * @return [object] tag w/o type attribute.
  */
-function my_project_remove_type_attr( $tag ) {
+function polylog_remove_type_attr( $tag ) {
 	return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
 }
 
-add_filter( 'style_loader_tag', 'my_project_remove_type_attr', 10, 2 );
-add_filter( 'script_loader_tag', 'my_project_remove_type_attr', 10, 2 );
-add_filter( 'autoptimize_html_after_minify', 'my_project_remove_type_attr', 10, 2 );
+add_filter( 'style_loader_tag', 'polylog_remove_type_attr', 10, 2 );
+add_filter( 'script_loader_tag', 'polylog_remove_type_attr', 10, 2 );
+add_filter( 'autoptimize_html_after_minify', 'polylog_remove_type_attr', 10, 2 );
+
+/**
+ * ADD PAGES AND CUSTOM POST TYPES IN WORDPRESS SEARCH RESULTS
+ *
+ * @param object $query The main WordPress query.
+ */
+function polylog_search_filter( $query ) {
+	if ( $query->is_search ) {
+		$query->set( 'post_type', array( 'post', 'page', 'case' ) );
+	}
+	return $query;
+}
+
+add_filter( 'pre_get_posts', 'polylog_search_filter' );
+
+/**
+ * REMOVES H2 FROM THE PAGINATION TEMPLATE
+ *
+ * @param string $template The default template.
+ * @param string $class    The class passed by the calling function.
+ */
+function polylog_navigation_template( $template, $class ) {
+	/*
+	Type of basic template:
+	<nav class="navigation %1$s" role="navigation">
+		<h2 class="screen-reader-text">%2$s</h2>
+		<div class="nav-links">%3$s</div>
+	</nav>
+	*/
+
+	return '
+	<nav class="%1$s" aria-label="%2$s">
+		%3$s
+	</nav>
+	';
+}
+add_filter( 'navigation_markup_template', 'polylog_navigation_template', 10, 2 );
 
 /**
  * -----------------------------------------------------------------------------

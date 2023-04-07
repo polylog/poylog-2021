@@ -3,8 +3,8 @@
 // .list-caption may be a span
 .list-caption {
   display: block;
-  padding-top: var(--space-padding-top-base);
-  padding-bottom: var(--space-padding-bottom-li);
+  padding-top: var(--padding-top-base);
+  padding-bottom: var(--padding-bottom-li);
 }
 
 ol,
@@ -12,16 +12,16 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
-  padding-bottom: var(--space-padding-bottom-list);
+  padding-bottom: var(--padding-bottom-list);
 }
 
 li {
-  padding-top: var(--space-padding-top-base);
-  padding-bottom: var(--space-padding-bottom-li);
+  padding-top: var(--padding-top-base);
+  padding-bottom: var(--padding-bottom-li);
 }
 
 ul {
-  list-style-image: var(--asset-data-image-list-bullet);
+  list-style-image: var(--list-bullet);
   padding-left: $size-2;
 
   @include media-breakpoint-up(md) {

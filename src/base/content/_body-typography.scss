@@ -10,8 +10,8 @@ pre,
 %body-copy {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: var(--space-padding-top-base);
-  padding-bottom: var(--space-padding-bottom-base);
+  padding-top: var(--padding-top-base);
+  padding-bottom: var(--padding-bottom-base);
 }
 
 .lead,
@@ -19,17 +19,17 @@ pre,
   font-family: var(--font-family-base);
   font-size: var(--font-size-big);
   font-weight: var(--font-weight-big);
-  line-height: var(--font-line-height-big);
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  line-height: var(--line-height-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
 }
 
 .petit,
 %petit {
   font-size: var(--font-size-small);
-  line-height: var(--font-line-height-small);
-  padding-top: var(--space-padding-top-small);
-  padding-bottom: var(--space-padding-bottom-small);
+  line-height: var(--line-height-small);
+  padding-top: var(--padding-top-small);
+  padding-bottom: var(--padding-bottom-small);
 }
 
 .note {
@@ -48,7 +48,7 @@ pre,
 
 .text-block {
   font-size: var(--font-size-base);
-  line-height: var(--font-line-height-base);
+  line-height: var(--line-height-base);
   margin-bottom: $size-line;
 
   &:last-of-type {

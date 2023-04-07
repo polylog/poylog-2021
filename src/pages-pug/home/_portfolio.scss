@@ -14,9 +14,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
   font-weight: 800;
-  line-height: var(--font-line-height-title);
-  padding-top: var(--space-padding-top-title);
-  padding-bottom: var(--space-padding-bottom-title);
+  line-height: var(--line-height-title);
+  padding-top: var(--padding-top-title);
+  padding-bottom: var(--padding-bottom-title);
   text-transform: uppercase;
 
   @include media-breakpoint-up(lg) {
@@ -48,7 +48,7 @@
   margin-top: $size-2;
   margin-right: $size-1;
   font-size: var(--font-size-base);
-  line-height: var(--font-line-height-base);
+  line-height: var(--line-height-base);
   content: counter(item, decimal-leading-zero) ' ';
   counter-increment: item;
 }
@@ -58,12 +58,12 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-subhead-h2);
   font-weight: 800;
-  line-height: var(--font-line-height-subhead-h2);
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
   position: relative;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .portfolio-main__link img {
@@ -73,7 +73,7 @@
   display: block;
   width: 80px;
   height: auto;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
   opacity: 0;
   transform: scaleY(0);
   transform-origin: bottom;
@@ -126,17 +126,17 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
   font-weight: 800;
-  line-height: var(--font-line-height-title);
-  padding-top: var(--space-padding-top-title);
-  padding-bottom: var(--space-padding-bottom-title);
+  line-height: var(--line-height-title);
+  padding-top: var(--padding-top-title);
+  padding-bottom: var(--padding-bottom-title);
 }
 
 .portfolio-more__all-caption {
   font-size: var(--font-size-);
   font-weight: 800;
-  line-height: var(--font-line-height-);
-  padding-top: var(--space-padding-top-);
-  padding-bottom: var(--space-padding-bottom-);
+  line-height: var(--line-height-);
+  padding-top: var(--padding-top-);
+  padding-bottom: var(--padding-bottom-);
 }
 
 .card-block {
@@ -179,7 +179,7 @@
 .card-block__link {
   display: block;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .card-block__link:hover,
@@ -202,14 +202,14 @@
   width: 100%;
   height: auto;
   margin-bottom: $size-3;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .card-block__caption {
   font-weight: bold;
   font-size: var(--font-size-big);
   line-height: 1.1;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .portfolio-teaser__btn {
@@ -223,9 +223,9 @@
     flex-direction: column;
     font-size: var(--font-size-big-static);
     font-weight: bold;
-    line-height: var(--font-line-height-big-static);
-    padding-top: var(--space-padding-top-big-static);
-    padding-bottom: var(--space-padding-bottom-big-static);
+    line-height: var(--line-height-big-static);
+    padding-top: var(--padding-top-big-static);
+    padding-bottom: var(--padding-bottom-big-static);
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -236,9 +236,9 @@
 .portfolio-more__title {
   @include media-breakpoint-up(lg) {
     font-size: var(--font-size-subhead-h2);
-    line-height: var(--font-line-height-subhead-h2);
-    padding-top: var(--space-padding-top-subhead-h2);
-    padding-bottom: var(--space-padding-bottom-subhead-h2);
+    line-height: var(--line-height-subhead-h2);
+    padding-top: var(--padding-top-subhead-h2);
+    padding-bottom: var(--padding-bottom-subhead-h2);
     width: 296px;
   }
 }

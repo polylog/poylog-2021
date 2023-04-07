@@ -5,10 +5,10 @@
 .career-teaser__text {
   font-size: var(--font-size-big);
   font-weight: 700;
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   margin: 0;
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
 }
 
 .career-teaser__text p {
@@ -22,9 +22,9 @@
 
 .career-teaser__contacts {
   font-size: var(--font-size-big);
-  line-height: var(--font-line-height-big);
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  line-height: var(--line-height-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
 }
 
 .career-teaser__contacts p {
@@ -39,7 +39,7 @@
 
 .career-teaser__contacts p a {
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .career-teaser__contacts p a:hover,
@@ -83,8 +83,8 @@
 .career-teaser__request:hover svg,
 .career-teaser__request:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .career-teaser__request:hover svg path,
@@ -106,9 +106,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-jumbo);
   font-weight: 800;
-  line-height: var(--font-line-height-jumbo);
-  padding-top: var(--space-padding-top-jumbo);
-  padding-bottom: var(--space-padding-bottom-jumbo);
+  line-height: var(--line-height-jumbo);
+  padding-top: var(--padding-top-jumbo);
+  padding-bottom: var(--padding-bottom-jumbo);
   line-height: 1.1;
   margin: 0;
   padding: 0;
@@ -191,7 +191,7 @@
   height: 48px;
   background-color: $color-ink-title;
   border-radius: 50%;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .career-vacancy__popup-close::before,
@@ -252,7 +252,7 @@
   margin-bottom: 12px;
   padding: 56px $size-3;
   background-color: $color-primary-bg-dark;
-  transition: all $motion-duration-md;
+  transition: all $duration-md;
   cursor: pointer;
 }
 
@@ -271,9 +271,9 @@
 .career-vacancy__item-title {
   font-size: var(--font-size-base);
   font-weight: bold;
-  line-height: var(--font-line-height-base);
-  padding-top: var(--space-padding-top-base);
-  padding-bottom: var(--space-padding-bottom-base);
+  line-height: var(--line-height-base);
+  padding-top: var(--padding-top-base);
+  padding-bottom: var(--padding-bottom-base);
 }
 
 .career-selection {
@@ -287,10 +287,10 @@
 
 .career-selection__title {
   font-size: var(--font-size-big);
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   font-weight: bold;
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
 
   @include media-breakpoint-up(lg) {
     width: 249px;
@@ -341,9 +341,9 @@
   font-family: var(--font-family-title);
   font-weight: 800;
   font-size: var(--font-size-jumbo);
-  line-height: var(--font-line-height-jumbo);
-  padding-top: var(--space-padding-top-jumbo);
-  padding-bottom: var(--space-padding-bottom-jumbo);
+  line-height: var(--line-height-jumbo);
+  padding-top: var(--padding-top-jumbo);
+  padding-bottom: var(--padding-bottom-jumbo);
   margin: 0;
   padding: 0;
   position: relative;
@@ -382,9 +382,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-big);
   font-weight: 800;
-  line-height: var(--font-line-height-big);
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  line-height: var(--line-height-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
 
   @include media-breakpoint-up(lg) {
     margin-right: 147px;
@@ -454,8 +454,8 @@
 .career-internship__request:hover svg,
 .career-internship__request:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .career-internship__request:hover svg path,
@@ -501,7 +501,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    transition: all $motion-duration-xl;
+    transition: all $duration-xl;
   }
 
   .career-vacancy__wrapper.active-left {
@@ -806,10 +806,10 @@
 .vac-bottom .vac-bottom__title,
 .vac-bottom__title {
   font-size: var(--font-size-big);
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   text-align: center;
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
   width: 100%;
 }
 

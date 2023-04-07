@@ -92,8 +92,8 @@
 .about-teaser__button:hover svg,
 .about-teaser__button:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .about-teaser__button:hover svg path,
@@ -180,12 +180,12 @@
 
   .about-teaser__figure-caption {
     font-size: var(--font-size-base);
-    line-height: var(--font-line-height-base);
+    line-height: var(--line-height-base);
   }
 
   .about-teaser__additional-text {
     font-size: var(--font-size-base);
-    line-height: var(--font-line-height-base);
+    line-height: var(--line-height-base);
   }
 
   .about-teaser__additional-text p {

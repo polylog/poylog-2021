@@ -7,9 +7,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-subhead-h2);
   font-weight: 800;
-  line-height: var(--font-line-height-subhead-h2);
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
   text-transform: uppercase;
 
   @include media-breakpoint-up(lg) {
@@ -40,14 +40,14 @@
   display: block;
   width: 100%;
   height: auto;
-  transition: opacity $motion-duration-xl $motion-easing-base;
+  transition: opacity $duration-xl $easing-base;
 }
 
 .clients__item img:nth-of-type(1) {
   animation-name: pulse;
-  animation-timing-function: $motion-easing-base;
+  animation-timing-function: $easing-base;
   animation-iteration-count: infinite;
-  animation-duration: $motion-duration-huge;
+  animation-duration: $duration-huge;
   animation-direction: alternate;
 }
 
@@ -56,9 +56,9 @@
   top: 0;
   left: 0;
   animation-name: pulse;
-  animation-timing-function: $motion-easing-base;
+  animation-timing-function: $easing-base;
   animation-iteration-count: infinite;
-  animation-duration: $motion-duration-huge;
+  animation-duration: $duration-huge;
   animation-direction: alternate-reverse;
 }
 
@@ -119,11 +119,11 @@
 
 
 .clients__item-1 img:nth-of-type(1) {
-  animation-duration: $motion-duration-king-size;
+  animation-duration: $duration-king-size;
 }
 
 .clients__item-1 img:nth-of-type(2) {
-  animation-duration: $motion-duration-king-size;
+  animation-duration: $duration-king-size;
 }
 
 .clients__item-2 img:nth-of-type(1) {
@@ -143,11 +143,11 @@
 }
 
 .clients__item-4 img:nth-of-type(1) {
-  animation-duration: $motion-duration-huge;
+  animation-duration: $duration-huge;
 }
 
 .clients__item-4 img:nth-of-type(2) {
-  animation-duration: $motion-duration-huge;
+  animation-duration: $duration-huge;
 }
 
 .clients__item-5 img:nth-of-type(1) {

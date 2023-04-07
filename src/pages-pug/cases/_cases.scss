@@ -16,10 +16,10 @@
 .case-item__title {
   font-size: var(--font-size-big-static);
   font-weight: 500;
-  line-height: var(--font-line-height-big-static);
+  line-height: var(--line-height-big-static);
   margin-top: $size-1;
-  padding-top: var(--space-padding-top-big-static);
-  padding-bottom: var(--space-padding-bottom-big-static);
+  padding-top: var(--padding-top-big-static);
+  padding-bottom: var(--padding-bottom-big-static);
 }
 
 // -----------------------------------------------------------------------------
@@ -61,7 +61,7 @@
     margin-bottom: 0;
     position: sticky;
     top: $size-4;
-    transition: $motion-duration-md;
+    transition: $duration-md;
     width: 380px;
     min-height: calc(100vh - 160px);
   }
@@ -94,11 +94,11 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-subhead-h2);
   font-weight: 800;
-  line-height: var(--font-line-height-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
   margin-top: $size-1;
   margin: 0;
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
 
   @include media-breakpoint-up(lg) {
     margin-bottom: $size-line;
@@ -133,8 +133,8 @@
 .case__request:hover svg,
 .case__request:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .case__request:hover svg path,
@@ -224,8 +224,8 @@
 .case__next:hover .case__next-title svg,
 .case__next:focus .case__next-title svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .case__next:hover .case__next-title svg path,
@@ -251,11 +251,11 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-subhead-h2);
   font-weight: 800;
-  line-height: var(--font-line-height-subhead-h2);
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
   text-transform: uppercase;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .case__next-title span {
@@ -277,7 +277,7 @@
   max-width: 376px;
   height: auto;
   margin: 0 auto;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 @include media-breakpoint-up(lg) {
@@ -320,9 +320,9 @@
   .case__content-split-title h3 {
     font-size: var(--font-size-big);
     font-weight: 800;
-    line-height: var(--font-line-height-big);
-    padding-top: var(--space-padding-top-big);
-    padding-bottom: var(--space-padding-bottom-big);
+    line-height: var(--line-height-big);
+    padding-top: var(--padding-top-big);
+    padding-bottom: var(--padding-bottom-big);
   }
 
   .case__content-split-text {
@@ -443,7 +443,7 @@
   margin-bottom: $size-3;
   margin-right: $size-3;
   outline: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .filter-date li:hover {
@@ -484,7 +484,7 @@
   line-height: 1.1;
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
   font-size: $size-3;
   text-decoration: none;
 }
@@ -511,7 +511,7 @@
   margin-bottom: 15px;
   padding: 0 15px;
   position: relative;
-  transition: $motion-duration-md;
+  transition: $duration-md;
   width: 100%;
 
   &:hover {

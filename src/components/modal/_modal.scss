@@ -10,7 +10,7 @@
   width: 100%;
   height: 100%;
   background-color: $color-background-inverse;
-  transition: all $motion-duration-md;
+  transition: all $duration-md;
   z-index: 9;
 }
 
@@ -53,7 +53,7 @@
   height: 2px;
   margin: auto;
   background-color: $color-background-base;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
   content: '';
 }
 
@@ -99,11 +99,11 @@
   display: block;
   font-size: var(--font-size-subhead-h2);
   font-weight: bold;
-  line-height: var(--font-line-height-subhead-h2);
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .services-popup__link:hover,
@@ -118,11 +118,11 @@
   display: block;
   font-size: var(--font-size-subhead-h2);
   font-weight: bold;
-  line-height: var(--font-line-height-subhead-h2);
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .career-popup ul li :hover,
@@ -178,7 +178,7 @@
   text-decoration: none;
   text-transform: uppercase;
   padding: $size-1 13px;
-  transition: $motion-duration-md;
+  transition: $duration-md;
 
   &:hover {
     color: $color-primary;
@@ -261,7 +261,7 @@
   width: 100%;
   height: 100%;
   background-color: $color-background-inverse;
-  transition: all $motion-duration-md;
+  transition: all $duration-md;
   z-index: 9;
 }
 
@@ -300,7 +300,7 @@
   height: 2px;
   margin: auto;
   background-color: $color-background-base;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
   content: '';
 }
 

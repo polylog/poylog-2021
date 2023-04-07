@@ -10,7 +10,7 @@
 get_header();
 ?>
 <main class="main main-index">
-	<h1 class="visually-hidden"><?php the_title(); ?></h1>
+	<h1 class="sr-only"><?php the_title(); ?></h1>
 	<section class="main-screen">
 		<div class="main-screen__main">
 
@@ -115,7 +115,7 @@ get_header();
 			unset( $phone );
 			?>
 			<a class="main-screen__contacts" href="#footer">Контакты</a>
-			<button class="btn main-screen__request form-request__open" type="button">
+			<button class="btn is-lg main-screen__request form-request__open" type="button">
 				<span>Заявка</span>
 				<svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/>
@@ -125,7 +125,7 @@ get_header();
 	</section>
 
 	<section class="about">
-		<h2 class="visually-hidden">О компании</h2>
+		<h2 class="sr-only">О компании</h2>
 		<div class="about-teaser">
 			<div class="container about-teaser__main">
 				<div class="about-teaser__text">
@@ -165,7 +165,7 @@ get_header();
 	<div class="history">
 		<div class="history-scroll">
 			<section class="history-events history-scroll__block">
-				<h2 class="visually-hidden">Предыстория</h2>
+				<h2 class="sr-only">Предыстория</h2>
 				<div class="history-events__title">
 					<?php
 					$prehistory_title = get_field( 'prehistory_title' );
@@ -232,7 +232,7 @@ get_header();
 			</section>
 
 			<section class="history-final history-scroll__block" style="background-image: url( <?php the_field( 'awards_img_bg' ); ?> );">
-				<h2 class="visually-hidden">Заключение</h2>
+				<h2 class="sr-only">Заключение</h2>
 				<?php if ( get_field( 'awards_count' ) ) { ?>
 					<div class="history-final__block anim-item anim-item--no-hide anim-scale-opacity">
 						<div class="history-final__value"><?php the_field( 'awards_count' ); ?></div>

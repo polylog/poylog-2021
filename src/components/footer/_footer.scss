@@ -50,8 +50,8 @@
 .footer-request:hover svg,
 .footer-request:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .footer-request:hover svg path,
@@ -65,7 +65,7 @@
   font-family: var(--font-family-title);
   font-weight: 800;
   font-size: var(--font-size-subhead-h2);
-  line-height: var(--font-line-height-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
   text-transform: uppercase;
 
   @include media-breakpoint-up(lg) {
@@ -103,10 +103,10 @@
 .footer-contacts__tel {
   font-weight: bold;
   font-size: var(--font-size-big);
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   color: $color-ink-inverse-normal;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .footer-contacts__tel:hover,
@@ -134,7 +134,7 @@
   display: block;
   font-weight: bold;
   text-decoration: none;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 }
 
 .footer-contacts__links-item a:hover,
@@ -177,7 +177,7 @@
   color: $color-ink-inverse-normal;
   text-decoration: none;
   border-bottom: 1px solid $color-primary;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
 
   &:hover,
   &:focus {
@@ -197,7 +197,7 @@
   background-color: $color-background-inverse;
   border: 1px solid $color-ink-title;
   border-radius: 50%;
-  transition: all $motion-duration-xs;
+  transition: all $duration-xxs;
   transform: rotate(-90deg);
   opacity: 0;
   pointer-events: none;
@@ -357,7 +357,7 @@
     display: flex;
     flex-direction: column-reverse;
     font-size: var(--font-size-subhead-h2);
-    line-height: var(--font-line-height-subhead-h2);
+    line-height: var(--line-height-subhead-h2);
     padding: 40px 12px;
     position: absolute;
     top: 0;

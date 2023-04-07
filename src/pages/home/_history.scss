@@ -424,7 +424,7 @@
     font-family: var(--font-family-accent);
     font-size: var(--font-size-subhead-h2);
     font-weight: 800;
-    line-height: var(--font-line-height-h2);
+    line-height: var(--line-height-h2);
     text-transform: uppercase;
     text-align: left;
     margin: 0 0 40px;
@@ -440,15 +440,15 @@
 }
 
 .history-award__item .award__item-span {
-  transition: opacity 6s $motion-easing-base;
+  transition: opacity 6s $easing-base;
   width: 100%;
 }
 
 .history-award__item .award__item-span:nth-of-type(1) {
   animation-name: pulse;
-  animation-timing-function: $motion-easing-base;
+  animation-timing-function: $easing-base;
   animation-iteration-count: infinite;
-  animation-duration: $motion-duration-huge;
+  animation-duration: $duration-huge;
   animation-direction: alternate;
 }
 
@@ -457,8 +457,8 @@
   top: 0;
   left: 1px;
   animation-name: pulse;
-  animation-timing-function: $motion-easing-base;
+  animation-timing-function: $easing-base;
   animation-iteration-count: infinite;
-  animation-duration: $motion-duration-huge;
+  animation-duration: $duration-huge;
   animation-direction: alternate-reverse;
 }

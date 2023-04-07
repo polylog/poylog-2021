@@ -2,7 +2,7 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
   font-weight: 800;
-  line-height: var(--font-line-height-title);
+  line-height: var(--line-height-title);
   margin: 0 auto $size-line;
   padding: 0;
 
@@ -27,9 +27,9 @@
   justify-content: center;
   font-family: var(--font-family-title);
   font-size: var(--font-size-jumbo);
-  line-height: var(--font-line-height-jumbo);
-  padding-top: var(--space-padding-top-jumbo);
-  padding-bottom: var(--space-padding-bottom-jumbo);
+  line-height: var(--line-height-jumbo);
+  padding-top: var(--padding-top-jumbo);
+  padding-bottom: var(--padding-bottom-jumbo);
   margin-bottom: -$size-1 * 8;
   overflow: hidden;
   pointer-events: none;
@@ -53,7 +53,7 @@
 .pr-teaser__blockquote {
   font-size: var(--font-size-big);
   font-weight: bold;
-  line-height: var(--font-line-height-big);
+  line-height: var(--line-height-big);
   margin: 0 0 40px;
   padding: 40px 0 0;
   position: relative;
@@ -116,9 +116,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-subhead-h2);
   font-weight: 800;
-  line-height: var(--font-line-height-subhead-h2);
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
 }
 
 .pr-about__image {
@@ -193,26 +193,26 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-subhead-h2);
   font-weight: 800;
-  line-height: var(--font-line-height-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
   margin-bottom: 12px;
   margin: 0;
   padding: 0;
 
-  @include media-breakpoint-up(lg) {
-    margin-bottom: $size-2;
-  }
-
   .pr-directions__title {
     margin-bottom: $size-3;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: $size-2;
   }
 }
 
 .pr-directions__subtitle {
   font-family: var(--font-family-title);
   font-size: var(--font-size-subhead-h2);
-  line-height: var(--font-line-height-subhead-h2);
-  padding-top: var(--space-padding-top-subhead-h2);
-  padding-bottom: var(--space-padding-bottom-subhead-h2);
+  line-height: var(--line-height-subhead-h2);
+  padding-top: var(--padding-top-subhead-h2);
+  padding-bottom: var(--padding-bottom-subhead-h2);
 }
 
 .pr-directions__list {
@@ -245,9 +245,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-big);
   font-weight: 800;
-  line-height: var(--font-line-height-big);
-  padding-top: var(--space-padding-top-big);
-  padding-bottom: var(--space-padding-bottom-big);
+  line-height: var(--line-height-big);
+  padding-top: var(--padding-top-big);
+  padding-bottom: var(--padding-bottom-big);
   text-transform: uppercase;
 
   @include media-breakpoint-up(lg) {
@@ -267,9 +267,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
   font-weight: 800;
-  line-height: var(--font-line-height-title);
-  padding-top: var(--space-padding-top-title);
-  padding-bottom: var(--space-padding-bottom-title);
+  line-height: var(--line-height-title);
+  padding-top: var(--padding-top-title);
+  padding-bottom: var(--padding-bottom-title);
 
   @include media-breakpoint-up(lg) {
     margin: 0 ($size-1 * 10);
@@ -283,9 +283,9 @@
 .pr-portfolio__text {
   @include media-breakpoint-up(lg) {
     font-size: var(--font-size-big);
-    line-height: var(--font-line-height-big);
-    padding-top: var(--space-padding-top-big);
-    padding-bottom: var(--space-padding-bottom-big);
+    line-height: var(--line-height-big);
+    padding-top: var(--padding-top-big);
+    padding-bottom: var(--padding-bottom-big);
     margin-left: $size-1 * 10;
     width: 462px;
   }

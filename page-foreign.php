@@ -12,7 +12,7 @@
 get_header();
 while ( have_posts() ) { the_post(); ?>
 	<main class="main main-eng">
-      	<h1 class="visually-hidden"><?php the_title(); ?></h1>
+      	<h1 class="sr-only"><?php the_title(); ?></h1>
       	<section class="main-screen">
       	  	<div class="main-screen__main">
 	        	<?php if ( have_rows('ms_row') ) { ?>
@@ -132,11 +132,11 @@ while ( have_posts() ) { the_post(); ?>
 
 		      	unset($footer_file_name,$footer_file);
 		      	?>
-	          	<button class="btn main-screen__request form-request__open" type="button"><span><?php the_field('ms_button'); ?></span><svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/></svg></button>
+	          	<button class="btn is-lg main-screen__request form-request__open" type="button"><span><?php the_field('ms_button'); ?></span><svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.0441 11.5L23.6959 1.98957L25.9505 0.010498L37.4945 13.1617L25.9506 26.3128L23.6959 24.3338L32.3279 14.5H0V11.5H32.0441Z" fill="white"/></svg></button>
 	        </div>
       	</section>
       	<section class="about about--foreign">
-	        <h2 class="visually-hidden">About Polylog</h2>
+	        <h2 class="sr-only">About Polylog</h2>
 	        <div class="about-teaser">
 	          <div class="container about-teaser__main">
 	            <div class="about-teaser__text">
@@ -179,7 +179,7 @@ while ( have_posts() ) { the_post(); ?>
 	        ?></div>
       </section>
       <section class="achievements">
-        <h2 class="visually-hidden">Achievements</h2>
+        <h2 class="sr-only">Achievements</h2>
         <div class="container">
         	<?php if ( have_rows('achievements') ) { ?>
 	          	<ul class="achievements__list">

@@ -1,9 +1,14 @@
+// -----------------------------------------------------------------------------
+// СOMPACT
+// -----------------------------------------------------------------------------
+
 .nav-links {
   display: flex;
 }
 
 .nav-previous a,
-.nav-next a {
+.nav-next a,
+%pager-button {
   border-radius: $shape-border-radius-sm;
   color: $color-ink-3ry;
   display: block;
@@ -11,8 +16,8 @@
   padding-top: 1rem;
   padding-bottom: .6rem;
   transition:
-    background $motion-duration-xs,
-    color $motion-duration-xs;
+    background $duration-xxs,
+    color $duration-xxs;
 
   &:hover {
     background-color: $color-background-alt;
@@ -30,7 +35,8 @@
 
 // Chevrons
 .nav-previous a::before,
-.nav-next a::after {
+.nav-next a::after,
+%pagination-chevron {
   background: $chevron-right no-repeat center;
   content: '';
   display: inline-block;
@@ -38,10 +44,53 @@
   margin-left: $size-1;
   opacity: .38;
   vertical-align: -.7rem;
-  width: $size-width-icon;
-  height: $size-width-icon;
+  width: $width-icon;
+  height: $width-icon;
 }
 
 .nav-previous a::before {
   transform: scaleX(-1);
 }
+
+// -----------------------------------------------------------------------------
+// FULL SIZE
+// -----------------------------------------------------------------------------
+
+.pagination > .page-numbers {
+  display: flex;
+  gap: $size-1;
+}
+
+.page-numbers > li {
+  flex-shrink: 0;
+}
+
+.page-numbers .page-numbers {
+  @extend %pager-button;
+
+  padding-left: $size-1p5;
+  padding-right: $size-1p5;
+}
+
+.page-numbers .page-numbers.current {
+  background-color: $color-background-alt;
+  color: $color-ink-base;
+}
+
+.page-numbers .page-numbers.next {
+  padding-right: 0;
+}
+
+.page-numbers .page-numbers.prev {
+  padding-left: 0;
+
+  &::before {
+    transform: scaleX(-1);
+  }
+}
+
+.page-numbers .page-numbers.next::after,
+.page-numbers .page-numbers.prev::before {
+  @extend %pagination-chevron;
+}
+

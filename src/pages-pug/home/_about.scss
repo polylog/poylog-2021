@@ -92,8 +92,8 @@
 .about-teaser__button:hover svg,
 .about-teaser__button:focus svg {
   animation-name: arrow;
-  animation-duration: $motion-duration-md;
-  animation-timing-function: $motion-easing-base;
+  animation-duration: $duration-md;
+  animation-timing-function: $easing-base;
 }
 
 .about-teaser__button:hover svg path,
@@ -126,9 +126,9 @@
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
   font-weight: 800;
-  line-height: var(--font-line-height-title);
-  padding-top: var(--space-padding-top-title);
-  padding-bottom: var(--space-padding-bottom-title);
+  line-height: var(--line-height-title);
+  padding-top: var(--padding-top-title);
+  padding-bottom: var(--padding-bottom-title);
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -139,9 +139,9 @@
     font-family: var(--font-family-title);
     font-size: var(--font-size-title);
     font-weight: 800;
-    line-height: var(--font-line-height-title);
-    padding-top: var(--space-padding-top-title);
-    padding-bottom: var(--space-padding-bottom-title);
+    line-height: var(--line-height-title);
+    padding-top: var(--padding-top-title);
+    padding-bottom: var(--padding-bottom-title);
   }
 }
 
@@ -185,12 +185,12 @@
 
   .about-teaser__figure-caption {
     font-size: var(--font-size-base);
-    line-height: var(--font-line-height-base);
+    line-height: var(--line-height-base);
   }
 
   .about-teaser__additional-text {
     font-size: var(--font-size-base);
-    line-height: var(--font-line-height-base);
+    line-height: var(--line-height-base);
   }
 
   .about-teaser__additional-text p {

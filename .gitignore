@@ -87,6 +87,7 @@ yarn-error.log*
 
 # Optional npm cache directory
 .npm
+.yarn
 
 # Dependency directories
 /node_modules

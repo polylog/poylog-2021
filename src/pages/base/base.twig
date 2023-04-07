@@ -114,14 +114,22 @@ $context['site']['icons']['apple_touch'] = '/base/graphics/icon.png';
 
   {# CONTENT ---------------------------------------------------------------- #}
 
-  <main class="main main-inner">
-    <div>
-      <div class="container">
-        {% block content %}
-        {% endblock %}
+
+
+  {% if post.is_blank %}
+    {% block content %}
+    {% endblock %}
+  {% else %}
+    <main class="main main-inner">
+      <div>
+        <div class="container">
+          {% block content %}
+          {% endblock %}
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
+  {% endif %}
+
 
   {# FOOTER ----------------------------------------------------------------- #}
   {% block footer %}

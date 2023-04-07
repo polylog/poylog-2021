@@ -12,7 +12,7 @@ while ( have_posts() ) :
 	the_post();
 	?>
 	<main class="main main-inner main-career" style="margin-top: 0; padding-top: 0; overflow: hidden;">
-			<h1 class="visually-hidden"><?php the_title(); ?></h1>
+			<h1 class="sr-only"><?php the_title(); ?></h1>
 
 				<section class="career-internship" id="career-internship">
 					<div class="career-internship__teaser">
@@ -50,7 +50,7 @@ while ( have_posts() ) :
 									echo '<img class="career-internship__resume-image" src="' . esc_url( kama_thumb_src( 'src=' . $feature_image . '&w=600&h=750' ) ) . '" srcset="' . esc_url( kama_thumb_src( 'src=' . $feature_image . '&w=1200&h=1500' ) ) . ' 2x" alt=""/>';
 								endif;
 								?>
-								<a target="_blank" href="mailto:Hr@polylog.ru?subject=Отправить резюме" class="btn career-internship__request email-btn" itemprop="email">
+								<a target="_blank" href="mailto:Hr@polylog.ru?subject=Отправить резюме" class="btn is-lg career-internship__request email-btn" itemprop="email">
 									<span>
 										<?php
 										$feature_button = get_field( 'feature_button' );
